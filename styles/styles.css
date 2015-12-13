@@ -144,36 +144,23 @@ section.CmyGrey {
     background-image: url("../images/B1heart_violet.png");
     background-size: 100% auto;
     background-repeat: no-repeat; }
+  section.CmyGrey .row.mySectionPadding > div {
+    padding-top: 200px;
+    height: auto;
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
   section.CmyGrey .C_icons2 {
-    padding-top: 200px;
-    height: auto;
-    background-image: url("../images/B2_diamond.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat; }
+    background-image: url("../images/B2_diamond.png"); }
   section.CmyGrey .C_icons2:hover {
-    background-image: url("../images/B2_diamond_violet.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat; }
+    background-image: url("../images/B2_diamond_violet.png"); }
   section.CmyGrey .C_icons3 {
-    padding-top: 200px;
-    height: auto;
-    background-image: url("../images/B3_mug.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat; }
+    background-image: url("../images/B3_mug.png"); }
   section.CmyGrey .C_icons3:hover {
-    background-image: url("../images/B3_mug_violet.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat; }
+    background-image: url("../images/B3_mug_violet.png"); }
   section.CmyGrey .C_icons4 {
-    padding-top: 200px;
-    height: auto;
-    background-image: url("../images/B4_phone.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat; }
+    background-image: url("../images/B4_phone.png"); }
   section.CmyGrey .C_icons4:hover {
-    background-image: url("../images/B4_phone_violet.png");
-    background-size: 100% auto;
-    background-repeat: no-repeat; }
+    background-image: url("../images/B4_phone_violet.png"); }
 
 section.myWhite {
   background-color: white;
