@@ -1,0 +1,324 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@font-face {
+  font-family: 'Lato';
+  src: url(../fonts/Lato-LigIta.ttf); }
+.myViolet {
+  color: #9f449b; }
+
+body {
+  background-color: rgba(224, 255, 42, 0.28);
+  font-family: 'Lato', sans-serif; }
+
+.myJustify {
+  width: 70%;
+  margin: 0 auto;
+  border: 3px dashed orangered;
+  text-align: center; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+section.myTopHeader {
+  background-image: url("../images/Bhagaskara_01.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 54%;
+  height: 0; }
+  section.myTopHeader .col-12 {
+    font-size: 2rem; }
+  section.myTopHeader h1 {
+    margin-bottom: 1px;
+    color: white;
+    padding-top: 4rem;
+    font-size: 2.6rem; }
+  section.myTopHeader h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 14px; }
+  section.myTopHeader h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: white; }
+  section.myTopHeader .ico_shape:nth-child(-n+2),
+  section.myTopHeader .ico_shape:nth-child(n+5):nth-child(-n+6) {
+    margin-top: 9rem; }
+  section.myTopHeader h4 {
+    color: black; }
+  section.myTopHeader .ico_shape {
+    background-image: url("../images/ico_shape.png");
+    background-size: 100% auto; }
+  section.myTopHeader .ico_shape:hover {
+    background-image: url("../images/ico_shape_hover.png");
+    cursor: pointer; }
+  section.myTopHeader .main_page p {
+    color: #000; }
+  section.myTopHeader .ScrHover:hover {
+    background-image: url(../images/A_scroller_violet.png);
+    cursor: pointer; }
+
+section.B_myWhite {
+  background-color: white;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #000000;
+  padding: 1.7rem 1.7rem; }
+  section.B_myWhite .belt_menu_row {
+    background-color: #fff;
+    background-size: 100% auto; }
+  section.B_myWhite .belt_menu li {
+    display: inline-block;
+    margin-right: 1rem; }
+    section.B_myWhite .belt_menu li:hover {
+      color: #9f449b; }
+  section.B_myWhite .align_left {
+    text-align: left; }
+  section.B_myWhite .align_right {
+    text-align: right; }
+
+section.CmyGrey {
+  background-color: #eee;
+  height: 590px;
+  padding-top: 110px;
+  padding-bottom: 110px; }
+  section.CmyGrey h2 {
+    padding: 28px 0 28px 0;
+    font-size: 1rem; }
+  section.CmyGrey p {
+    font-size: 0.9rem; }
+  section.CmyGrey .C_icons {
+    padding-top: 200px;
+    height: auto;
+    background-image: url("../images/B1_heart.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  section.CmyGrey .C_icons:hover {
+    background-image: url("../images/B1heart_violet.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  section.CmyGrey .C_icons2 {
+    padding-top: 200px;
+    height: auto;
+    background-image: url("../images/B2_diamond.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  section.CmyGrey .C_icons2:hover {
+    background-image: url("../images/B2_diamond_violet.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  section.CmyGrey .C_icons3 {
+    padding-top: 200px;
+    height: auto;
+    background-image: url("../images/B3_mug.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  section.CmyGrey .C_icons3:hover {
+    background-image: url("../images/B3_mug_violet.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  section.CmyGrey .C_icons4 {
+    padding-top: 200px;
+    height: auto;
+    background-image: url("../images/B4_phone.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+  section.CmyGrey .C_icons4:hover {
+    background-image: url("../images/B4_phone_violet.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat; }
+
+section.myWhite {
+  background-color: white;
+  height: 390px; }
+  section.myWhite .BackFramE {
+    background-image: url("../images/C_frameBold.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  section.myWhite h2 {
+    font-size: 1.8rem;
+    color: #8b8b8b; }
+    section.myWhite h2 span {
+      color: #9f449b; }
+  section.myWhite .col-6:first-child img {
+    width: 100%;
+    height: auto; }
+  section.myWhite .buttonCTA {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    background-color: #9f449b;
+    box-shadow: 0 5px #9a0c7c;
+    padding: 10px 20px;
+    border-radius: 5px; }
+    section.myWhite .buttonCTA a {
+      text-decoration: none;
+      font-size: 1.5rem; }
+
+.mySectE {
+  background-image: url("../images/E_background_violet.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding-bottom: 31.2%;
+  height: 0; }
+
+.myQuotes {
+  padding: 6.5% 6.5%; }
+
+.mySectF {
+  background-color: white; }
+
+.mySectH {
+  background-color: darkred; }
+
+.mySectI {
+  background-color: chartreuse; }
+  .mySectI img {
+    width: 100%;
+    height: 100%; }
+  .mySectI .myForm {
+    background-color: aqua; }
+    .mySectI .myForm #formularz label {
+      display: inline-block;
+      width: 100px;
+      text-align: right; }
+    .mySectI .myForm #submit {
+      padding-left: 100px; }
+    .mySectI .myForm #formularz div {
+      margin-top: 1em; }
+    .mySectI .myForm #formularz div input {
+      width: 170px; }
+    .mySectI .myForm textarea {
+      vertical-align: top;
+      height: 5em;
+      width: 170px; }
+    .mySectI .myForm input.invalid, .mySectI .myForm textarea.invalid {
+      border: 3px solid red; }
+    .mySectI .myForm input.valid, .mySectI .myForm textarea.valid {
+      border: 3px solid green; }
+    .mySectI .myForm .blad {
+      color: red; }
+    .mySectI .myForm .ok {
+      color: green; }
+  .mySectI .mediaIcons a {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #dddddd;
+    border-radius: 50%;
+    margin: 2px 2px 2px 0;
+    padding: 3px 3px;
+    font-size: 1.5rem;
+    display: inline-block;
+    color: #161616; }
+
+* {
+  box-sizing: border-box; }
+
+.grid-container {
+  width: 100%;
+  max-width: 800px; }
+
+.row:after {
+  content: "";
+  clear: both;
+  display: block; }
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 2px double yellow; }
+
+.col-1 {
+  width: 8.33%; }
+
+.col-2 {
+  width: 16.66%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33%; }
+
+.col-5 {
+  width: 41.66%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33%; }
+
+.col-8 {
+  width: 66.66%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33%; }
+
+.col-11 {
+  width: 91.66%; }
+
+.col-12 {
+  width: 100%; }
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px; }
+
+.myWidth {
+  margin: 0 auto;
+  width: 90%; }
+
+/*# sourceMappingURL=styles.css.map */
