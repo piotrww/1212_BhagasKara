@@ -1,6 +1,78 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
+//Sticky menu
+
+    $(function(){
+
+        //moze tez $(window).scroll()
+
+        var menu = $(".B_myWhite");
+        var lastPositionTop = 0;
+        var menuHeight = menu.height();
+        var paragraphs = $("section");
+        var links = $("nav a");
+
+        $(window).on("scroll", function(){
+            if(menu.hasClass("sticky") === false && $(this).scrollTop() > menu.offset().top){
+                lastPositionTop = menu.offset().top;
+                menu.addClass("sticky"); //dodanie klasy, ale po spr. czy nie ma jej.
+                menu.animate({
+                   // height: (menuHeight).toString() + "px"
+                }, 500);
+            }
+            if(menu.hasClass("sticky") && $(this).scrollTop() < lastPositionTop){
+                menu.removeClass("sticky");
+                menu.animate({
+                  //  height: (menuHeight).toString() + "px"
+                }, 500);
+            }
+
+            paragraphs.each(function(index){ // index tego paragrafu, wylicza z petli JS.
+                if(index + 1 == paragraphs.length){ // ostatni paragraf
+                    if( paragraphs.eq(index).offset().top < $(window).scrollTop()){
+                        links.eq(index).addClass("active");
+                    }
+                    else {
+                        links.eq(index).removeClass("active");
+                    }
+                }
+                else {
+                    if( paragraphs.eq(index).offset().top < $(window).scrollTop() &&  paragraphs.eq(index + 1).offset().top > $(window).scrollTop()){
+                        links.eq(index).addClass("active"); // wylacza po wlaczeniu, jak zjedziemy np z pkt 3 do pkt 6.
+                    }
+                    else {
+                        links.eq(index).removeClass("active");
+                    }
+                }
+
+            });
+
+        });
+
+
+
+
+    });
+
+//photoShow
+
+    $('.photoShow img').on("click", function() {
+        var src = $(this).attr("src");
+        var div = $("<div class='popupImg'><img src=" + src + "/></div>");
+        $('body').append(div);
+
+        div.on("click", function() {
+            div.remove()
+
+        })
+
+    });
+
+
+
+
+
 
     //name validation
     $('#name').on('blur', function() {

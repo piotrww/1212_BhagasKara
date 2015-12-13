@@ -22,7 +22,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+ // font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -56,7 +56,7 @@ table {
 
 {
 
-  font-family: 'Lato';
+  font-family: Lato;
 
   src:url(../fonts/Lato-LigIta.ttf);
 
@@ -95,6 +95,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+
 
 
 
@@ -176,7 +178,7 @@ section.myTopHeader {
 
 //B White belt menu
 
-section.B_myWhite {
+nav.B_myWhite {
   background-color: white;
   text-transform: uppercase;
   font-size: $fontSizeBeltMenu;
@@ -197,9 +199,20 @@ section.B_myWhite {
 
     }
 
+    a.active {
+      color: $myViolet;
+      background-color: greenyellow;
+    }
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    //left: 0;
+    width: 100%;
 
 
   }
+
 
   .align_left {
     text-align: left;
@@ -208,6 +221,7 @@ section.B_myWhite {
   .align_right {
     text-align: right;
   }
+
 }
 
 
@@ -381,8 +395,11 @@ section.myWhite {
   img {
     width: 100%;
     height: 100%;
-
+    cursor: pointer;
   }
+}
+
+
 
   .myForm {
     background-color: aqua;
@@ -445,6 +462,18 @@ section.myWhite {
 
   }
 
+}
+
+.popupImg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: flex; //FLEX!
+  justify-content: center;
+  align-items: center;
 }
 
 
