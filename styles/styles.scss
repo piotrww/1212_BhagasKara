@@ -1,3 +1,13 @@
+.myFlex {
+  display: flex; //FLEX!
+  justify-content: center;
+ align-items: center;
+
+
+
+}
+
+
 //Reset
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -15,7 +25,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -27,7 +37,7 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, menu, nav, section {
   display: block;
 }
 body {
@@ -96,8 +106,23 @@ a {
   color: inherit;
 }
 
+.BackFramE {
+  background-image: url("../images/C_frameBold.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
+}
 
+h2 {
+  font-size: 1.8rem;
+  color: $myGreyDark;
+
+  span {
+    color: $myViolet;
+
+  }
+}
 
 
 
@@ -152,7 +177,15 @@ section.myTopHeader {
 
   .ico_shape {
     background-image: url('../images/ico_shape.png');
-    background-size: 100% auto;
+    background-size: 90% auto;
+    padding-top: 5%;
+    padding-bottom:5%;
+    background-position: top center;
+    //width: 100%;
+    background-repeat: no-repeat;
+    img {
+      width:50%;
+    }
   }
 
   .ico_shape:hover {
@@ -186,29 +219,89 @@ nav.B_myWhite {
   padding: 1.7rem 1.7rem;
 
   .belt_menu_row {
-    background-color: #fff;
+    background-color: lavenderblush;
     background-size: 100% auto;
+    z-index: +1;
+    }
+
+  .nav-expanded {
+    display: block;
+
   }
 
+
+
+  .menu_trigger {
+    display: none;
+    font-size: larger;
+
+    @media screen and (max-width: 480px) {
+
+      display: block;
+      border-bottom: 2px solid $myViolet;
+    }
+  }
+
+ .wlaczPoRozszerzeniu {
+   display: inline-block;
+ }
+
   .belt_menu li {
-    display: inline-block;
+  display: inline-block;
+    background-color: darkorange;
     margin-right: 1rem;
 
     &:hover {
-    color: $myViolet;
+      color: $myViolet;
 
     }
 
-    a.active {
+    @media screen and (max-width: 480px) {
+
+
+      background-color: lawngreen;
+      display: none;
+      border-bottom: 2px solid $myViolet;
+
+        &:last-child {
+           border-bottom: none;
+
+        }
+
+
+    }
+  }
+
+  * h4 {
+
+    transition-property: opacity;
+    transition-duration:2s;
+
+
+
+    @media screen and (max-width: 480px) {
+      opacity: 0.2;
+    }
+
+
+  }
+
+
+
+
+
+
+      a.active {
       color: $myViolet;
       background-color: greenyellow;
     }
-  }
+
   &.sticky {
     position: fixed;
     top: 0;
     //left: 0;
     width: 100%;
+    z-index: +1;
 
 
   }
@@ -223,6 +316,9 @@ nav.B_myWhite {
   }
 
 }
+
+
+
 
 
 //C grey section
@@ -314,28 +410,22 @@ section.CmyGrey {
 // D White section devices
 
 section.myWhite {
-  background-color: white;
+  background-color: #ffffff;
   height: 390px;
+  padding: 30px 30px;
 
-  .BackFramE {
-    background-image: url("../images/C_frameBold.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-    color: $myGreyDark;
-
-      span {
-        color: $myViolet;
-
-      }
-  }
+  //h2 {
+  //  font-size: 1.8rem;
+  //  color: $myGreyDark;
+  //
+  //    span {
+  //      color: $myViolet;
+  //
+  //    }
+  //}
 
   .col-6:first-child {
-    //background-color: chartreuse;
+
     img {
       width: 100%;
       height: auto
@@ -390,14 +480,25 @@ section.myWhite {
 
 
 .mySectI {
-  background-color: chartreuse;
+ // background-color: saddlebrown;
+  z-index: -1;
 
   img {
     width: 100%;
     height: 100%;
     cursor: pointer;
+    transition: transform 1.5s;
+    z-index: -1;
+  &:hover {
+      transform: scale(1.08);
+    z-index: -1;
+
+    }
+
   }
-}
+
+
+  }
 
 
 
@@ -460,9 +561,9 @@ section.myWhite {
     display: inline-block;
     color: #161616;
 
-  }
-
 }
+
+
 
 .popupImg {
   position: fixed;
@@ -535,3 +636,4 @@ section.myWhite {
   width: 90%;
 
 }
+

@@ -18,7 +18,7 @@ $( document ).ready(function() {
                 lastPositionTop = menu.offset().top;
                 menu.addClass("sticky"); //dodanie klasy, ale po spr. czy nie ma jej.
                 menu.animate({
-                   // height: (menuHeight).toString() + "px"
+                 //   height: (menuHeight).toString() + "px"
                 }, 500);
             }
             if(menu.hasClass("sticky") && $(this).scrollTop() < lastPositionTop){
@@ -54,6 +54,30 @@ $( document ).ready(function() {
 
 
     });
+//menu small screen
+
+
+    $('.menu_trigger').click(function() {
+
+        $('.qqq li').slideToggle(400, function() {
+            $(this).toggleClass('wlaczPoRozszerzeniu').css('display', '');
+
+        });
+
+    });
+
+
+////Menu, znikanie napisy
+//var myElemWithOpacity = $('#myOpacity');
+//var myOpacityValue = myElemWithOpacity.css('opacity');
+//
+//    myElemWithOpacity.change(function() {
+//        if (myOpacityValue == 0) {
+//            $(myElemWithOpacity).remove();
+//            console.log("jest przezroczyste");
+//        }
+//    });
+
 
 //photoShow
 
@@ -65,7 +89,7 @@ $( document ).ready(function() {
         div.on("click", function() {
             div.remove()
 
-        })
+        });
 
     });
 

@@ -1,3 +1,8 @@
+.myFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -12,7 +17,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -23,7 +28,7 @@ time, mark, audio, video {
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, menu, nav, section {
   display: block; }
 
 body {
@@ -64,6 +69,18 @@ a {
   text-decoration: none;
   color: inherit; }
 
+.BackFramE {
+  background-image: url("../images/C_frameBold.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+h2 {
+  font-size: 1.8rem;
+  color: #8b8b8b; }
+  h2 span {
+    color: #9f449b; }
+
 section.myTopHeader {
   background-image: url("../images/Bhagaskara_01.jpg");
   background-repeat: no-repeat;
@@ -94,7 +111,13 @@ section.myTopHeader {
     color: black; }
   section.myTopHeader .ico_shape {
     background-image: url("../images/ico_shape.png");
-    background-size: 100% auto; }
+    background-size: 90% auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-position: top center;
+    background-repeat: no-repeat; }
+    section.myTopHeader .ico_shape img {
+      width: 50%; }
   section.myTopHeader .ico_shape:hover {
     background-image: url("../images/ico_shape_hover.png");
     cursor: pointer; }
@@ -111,20 +134,45 @@ nav.B_myWhite {
   color: #000000;
   padding: 1.7rem 1.7rem; }
   nav.B_myWhite .belt_menu_row {
-    background-color: #fff;
-    background-size: 100% auto; }
+    background-color: lavenderblush;
+    background-size: 100% auto;
+    z-index: +1; }
+  nav.B_myWhite .nav-expanded {
+    display: block; }
+  nav.B_myWhite .menu_trigger {
+    display: none;
+    font-size: larger; }
+    @media screen and (max-width: 480px) {
+      nav.B_myWhite .menu_trigger {
+        display: block;
+        border-bottom: 2px solid #9f449b; } }
   nav.B_myWhite .belt_menu li {
     display: inline-block;
+    background-color: darkorange;
     margin-right: 1rem; }
     nav.B_myWhite .belt_menu li:hover {
       color: #9f449b; }
-    nav.B_myWhite .belt_menu li a.active {
-      color: #9f449b;
-      background-color: greenyellow; }
+    @media screen and (max-width: 480px) {
+      nav.B_myWhite .belt_menu li {
+        background-color: lawngreen;
+        display: none;
+        border-bottom: 2px solid #9f449b; }
+        nav.B_myWhite .belt_menu li:last-child {
+          border-bottom: none; } }
+  nav.B_myWhite * h4 {
+    transition-property: opacity;
+    transition-duration: 2s; }
+    @media screen and (max-width: 480px) {
+      nav.B_myWhite * h4 {
+        opacity: 0.2; } }
+  nav.B_myWhite a.active {
+    color: #9f449b;
+    background-color: greenyellow; }
   nav.B_myWhite.sticky {
     position: fixed;
     top: 0;
-    width: 100%; }
+    width: 100%;
+    z-index: +1; }
   nav.B_myWhite .align_left {
     text-align: left; }
   nav.B_myWhite .align_right {
@@ -169,18 +217,9 @@ section.CmyGrey {
     background-image: url("../images/B4_phone_violet.png"); }
 
 section.myWhite {
-  background-color: white;
-  height: 390px; }
-  section.myWhite .BackFramE {
-    background-image: url("../images/C_frameBold.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; }
-  section.myWhite h2 {
-    font-size: 1.8rem;
-    color: #8b8b8b; }
-    section.myWhite h2 span {
-      color: #9f449b; }
+  background-color: #ffffff;
+  height: 390px;
+  padding: 30px 30px; }
   section.myWhite .col-6:first-child img {
     width: 100%;
     height: auto; }
@@ -213,47 +252,52 @@ section.myWhite {
   background-color: darkred; }
 
 .mySectI {
-  background-color: chartreuse; }
+  z-index: -1; }
   .mySectI img {
     width: 100%;
     height: 100%;
-    cursor: pointer; }
-    .mySectI img :hover {
-      background-color: black; }
-  .mySectI .myForm {
-    background-color: aqua; }
-    .mySectI .myForm #formularz label {
-      display: inline-block;
-      width: 100px;
-      text-align: right; }
-    .mySectI .myForm #submit {
-      padding-left: 100px; }
-    .mySectI .myForm #formularz div {
-      margin-top: 1em; }
-    .mySectI .myForm #formularz div input {
-      width: 170px; }
-    .mySectI .myForm textarea {
-      vertical-align: top;
-      height: 5em;
-      width: 170px; }
-    .mySectI .myForm input.invalid, .mySectI .myForm textarea.invalid {
-      border: 3px solid red; }
-    .mySectI .myForm input.valid, .mySectI .myForm textarea.valid {
-      border: 3px solid green; }
-    .mySectI .myForm .blad {
-      color: red; }
-    .mySectI .myForm .ok {
-      color: green; }
-  .mySectI .mediaIcons a {
-    height: 50px;
-    width: 50px;
-    border: 2px solid #dddddd;
-    border-radius: 50%;
-    margin: 2px 2px 2px 0;
-    padding: 3px 3px;
-    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 1.5s;
+    z-index: -1; }
+    .mySectI img:hover {
+      transform: scale(1.08);
+      z-index: -1; }
+
+.myForm {
+  background-color: aqua; }
+  .myForm #formularz label {
     display: inline-block;
-    color: #161616; }
+    width: 100px;
+    text-align: right; }
+  .myForm #submit {
+    padding-left: 100px; }
+  .myForm #formularz div {
+    margin-top: 1em; }
+  .myForm #formularz div input {
+    width: 170px; }
+  .myForm textarea {
+    vertical-align: top;
+    height: 5em;
+    width: 170px; }
+  .myForm input.invalid, .myForm textarea.invalid {
+    border: 3px solid red; }
+  .myForm input.valid, .myForm textarea.valid {
+    border: 3px solid green; }
+  .myForm .blad {
+    color: red; }
+  .myForm .ok {
+    color: green; }
+
+.mediaIcons a {
+  height: 50px;
+  width: 50px;
+  border: 2px solid #dddddd;
+  border-radius: 50%;
+  margin: 2px 2px 2px 0;
+  padding: 3px 3px;
+  font-size: 1.5rem;
+  display: inline-block;
+  color: #161616; }
 
 .popupImg {
   position: fixed;
