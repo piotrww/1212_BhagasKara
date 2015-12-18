@@ -54,29 +54,49 @@ $( document ).ready(function() {
 
 
     });
+
+//people
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //menu small screen
 
 
     $('.menu_trigger').click(function() {
 
-        $('.qqq li').slideToggle(400, function() {
-            $(this).toggleClass('wlaczPoRozszerzeniu').css('display', '');
+        $('.belt_menu li').toggle('visibility')
+    });
+//menu revert from smaller to bigger
 
-        });
+    $(window).on('resize', function(){
+        var win = $(this); //this = window
+        if (win.width() >= 480) {
+            $('.belt_menu li').css('display', '');
 
+        }
     });
 
 
-////Menu, znikanie napisy
-//var myElemWithOpacity = $('#myOpacity');
-//var myOpacityValue = myElemWithOpacity.css('opacity');
-//
-//    myElemWithOpacity.change(function() {
-//        if (myOpacityValue == 0) {
-//            $(myElemWithOpacity).remove();
-//            console.log("jest przezroczyste");
-//        }
-//    });
+
+
 
 
 //photoShow

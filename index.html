@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
 
     <script src="script/jquery-2.1.4.js"></script>
-    <script type="text/javascript" src="script/script.js"></script>
+    <script type="text/javascript" src="script/odliczanie_funkcja.js"></script>
 
 
 
@@ -83,7 +83,7 @@
             <div class="col-8">
                 <div class="menu_trigger">menu</div>
                 <!--//dla malych ekranow-->
-                <ul class="belt_menu  qqq" id="toHide">
+                <ul class="belt_menu">
                     <li><a href="#pos1">home</a></li>
                     <li><a href="#pos2">about</a></li>
                     <li><a href="#pos3">team</a></li>
@@ -103,7 +103,7 @@
     <div class="grid-container myJustify">
         <div class="row mySectionPadding">
 
-            <div class="col-3 C_icons">
+0            <div class="col-3 C_icons">
 
 
                 <h2>Build with love</h2>
@@ -202,22 +202,49 @@
 
         <div class="row">
             <div class="col-12">
+                <img id="ArrowLeft" src="images/F_arrow_slide.png">
+                <img id="ArrowRight" src="images/F_arrow_slide.png">
             </div>
         </div>
 
         <div class="row">
             <div class="col-4">
+                <img src="images/F1!.jpg"/>
+                <h2>Maria</h2>
+                <h3>CEO</h3>
+                    <div class="mediaIcons">
+                        <a href="#">f</a>
+                        <a href="#">g</a>
+                    </div>
+
+
             </div>
 
             <div class="col-4">
+                <img src="images/F2!.jpg"/>
+                    <h2>Adam</h2>
+                    <h3>FEO</h3>
+                        <div class="mediaIcons">
+                            <a href="#">f</a>
+                            <a href="#">g</a>
+                        </div>
+
             </div>
 
             <div class="col-4">
+                <img src="images/F3!.jpg"/>
+                    <h2>Robert</h2>
+                     <h3>PMJ</h3>
+                         <div class="mediaIcons">
+                            <a href="#">f</a>
+                            <a href="#">g</a>
+                         </div>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 BackFramE">
+
                 <h2>Our <span>skills</span></h2>
             </div>
         </div>
@@ -225,18 +252,49 @@
 
         <div class="row">
             <div class="col-6">
+
+
+                <p class="left">web design</p>
+                <p class="right">90%</p>
+
+                <div class="prog">
+                        <div id="progBar1">
+
+                        </div>
+                    </div>
             </div>
 
             <div class="col-6">
+                <p class="left">graphic design</p>
+                <p class="right">70%</p>
+                    <div class="prog">
+                        <div id="progBar2">
+
+                        </div>
+                    </div>
             </div>
         </div>
 
 
         <div class="row">
             <div class="col-6">
+                <p class="left">html/css</p>
+                <p class="right">60%</p>
+                <div class="prog">
+                    <div id="progBar3">
+
+                    </div>
+                </div>
             </div>
 
             <div class="col-6">
+                <p class="left">ux/ix</p>
+                <p class="right">50%</p>
+                <div class="prog">
+                     <div id="progBar4">
+
+                     </div>
+                  </div>
             </div>
         </div>
     </div>
@@ -268,33 +326,52 @@
 
     <div class="grid-container myJustify">
 
-        <div class="row  blockquote">
+        <div class="row blockquote">
             <div class="col-3">
-                <h2>365</h2>
-                <h2>Lorem Ipsum</h2>
+                <h2><span class="counter"></span></h2>
+                <h3>Lorem Ipsum</h3>
 
             </div>
 
             <div class="col-3">
-                <h2>98%</h2>
-                <h2>Lorem Ipsum</h2>
+                <h2 ><span class="counter"></span>%</h2>
+                <h3>Lorem Ipsum</h3>
 
             </div>
 
             <div class="col-3">
-                <h2>69%</h2>
-                <h2>Lorem Ipsum</h2>
+                <h2><span class="counter"></span></h2>
+                <h3>Lorem Ipsum</h3>
             </div>
 
             <div class="col-3">
-                <h2>1642</h2>
-                <h2>Lorem Ipsum</h2>
+                <h2><span class="counter"></span></h2>
+                <h3>Lorem Ipsum</h3>
             </div>
 
         </div>
 
         <div class="row">
-            <div class="col-12"></div>
+            <div class="col-12 bottomBelt">
+                <div class="kontener">
+                    <div class="slajd" id="s1">
+                        <img src="images/F3!.jpg"/>
+                        <p>Platform and Plugin Updates: A new version of WebStorm is available! (show balloon).
+                            Platform and Plugin Updates: A new version of WebStorm is available! (show balloon). Platform and Plugin Updates: A new version of WebStorm is available! (show balloon).</p>
+
+                        <h3>Robert, mouse calibration specialist</h3>
+                    </div>
+
+
+                    <div class="slajd" id="s2">
+                            <img src="images/F2!.jpg"/>
+                            <p>Lorem Lorem Lorem Lorem Lorem Lorem
+                            </p>
+
+                            <h3>Sigmund, keyboard crash tester</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -355,7 +432,9 @@
 
         <div class="row">
             <div class="col-12">
-                12
+                <div class="BackFramE">
+                    <h2>About <span>us</span></h2>
+                </div>
             </div>
         </div>
 
@@ -367,33 +446,26 @@
                 <form id="formularz" method="post" action="">
 
                     <div>
-                        <label for="name">Your name</label>
+
                         <input type="text" id="name" name="name" placeholder="please enter your name">
-                        </input>
                         <span class="myKomunikat"></span>
                     </div>
 
-
-
                     <div>
-                        <label for="email">Your email:</label>
+
                         <input type="email" id="email" name="email" placeholder="please enter your email">
-                        </input>
                         <span class="myKomunikat"></span>
                     </div>
 
 
                     <div>
-                        <label for="message">Your message</label>
+
                         <textarea id="message" name="message" placeholder="What we can do 4u?"></textarea>
-                        </input>
                         <span class="myKomunikat"></span>
                     </div>
 
 
-                    <div id="submit">
-                        <button type="submit">Wyślij email</button>
-                    </div>
+
                 </form>
 
 
@@ -404,8 +476,8 @@
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
                         Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
                     <p>1600 Pennsylvania Ave NW, <br>Washington, DC 20500, <br>United States of America.</p>
-                    <p>T: (202) 456-1111<br>
-                        M: (202) 456-1212</p>
+                    <p>T: (202) 456-1111</p>
+                    <p>M: (202) 456-1212</p>
                 </div>
 
                 <div class="mediaIcons">
@@ -422,10 +494,14 @@
 
         <div class="row">
             <div class="col-12">
-                12, send email
+                <div id="submit">
+                    <button type="submit">Wyślij email</button>
+                </div>
             </div>
         </div>
     </div>
 </section>
+<!--test elemenent-->
+
 </body>
 </html>
