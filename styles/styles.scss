@@ -131,7 +131,7 @@ $myVioletLight: #e69fd1;
 $myVioletDark: #9a0c7c;
 $myGreyDark: #8b8b8b;
 $myGreyLight: #e8e8e8;
-$myBorder: 3px dashed orangered;
+$myBorder: 2.2px dashed orangered;
 $myBorder2: 2px double yellow;
 $fontSizeBeltMenu: 0.9rem;
 $fontColorBeltMenu: #000000;
@@ -157,7 +157,7 @@ body {
 .myJustify {
   width: 70%;
   margin: 0 auto;
-  border: $myBorder;
+//  border: $myBorder;
   text-align: center;
 }
 
@@ -208,14 +208,20 @@ h4 {
 
 
 .BackFramE {
-  background-image: url("../images/C_frameBold.png");
+  background-image: url("../images/I_frameBold.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 
 }
 
+.BackFramX {
+  background-image: url("../images/I_frameBold.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
+}
 
 
 
@@ -470,6 +476,8 @@ section.CmyGrey {
 
 }
 
+
+
 // D White section devices
 
 .myWhite {
@@ -561,7 +569,6 @@ section.CmyGrey {
     .wrapperVis {
 
       width:  750px;
-      border: 4px dotted mediumseagreen;
       overflow: hidden;
       margin: auto;
 
@@ -690,7 +697,8 @@ section.CmyGrey {
 
 
 .mySectH {
-  background-color: #fff;
+  background-color: $myGreyLight;
+  margin-top: 0;
 
   h2 {
     color: $myViolet;
@@ -783,6 +791,25 @@ section.CmyGrey {
     }
 
 
+
+  .buttonMail {
+    width: 21%;
+    height: 40px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: $myViolet;
+    box-shadow: 0 3px $myVioletDark;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+
+
   }
 
 
@@ -807,7 +834,7 @@ section.CmyGrey {
 
         textarea {
           vertical-align: top;
-          height: 5em;
+          height: 9em;
           width: 90%;
 
           .invalid {
@@ -901,6 +928,7 @@ section.CmyGrey {
 .grid-container {
   width : 100%;
   max-width : 800px;
+  border: 2px solid red;
 }
 
 .row:after {

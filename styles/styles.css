@@ -91,7 +91,6 @@ body {
 .myJustify {
   width: 70%;
   margin: 0 auto;
-  border: 3px dashed orangered;
   text-align: center; }
 
 a {
@@ -120,7 +119,13 @@ h4 {
   color: black; }
 
 .BackFramE {
-  background-image: url("../images/C_frameBold.png");
+  background-image: url("../images/I_frameBold.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+.BackFramX {
+  background-image: url("../images/I_frameBold.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; }
@@ -290,7 +295,6 @@ section.CmyGrey {
     transform: rotate(180deg); }
   .mySectF .wrapperVis {
     width: 750px;
-    border: 4px dotted mediumseagreen;
     overflow: hidden;
     margin: auto; }
     .mySectF .wrapperVis .wrapper {
@@ -351,7 +355,8 @@ section.CmyGrey {
   to {
     background-position: 20px 0; } }
 .mySectH {
-  background-color: #fff; }
+  background-color: #e8e8e8;
+  margin-top: 0; }
   .mySectH h2 {
     color: #9f449b; }
   .mySectH h3 {
@@ -393,6 +398,19 @@ section.CmyGrey {
     padding-top: 20px; }
   .mySectI p:nth-last-child(-n+2) {
     font-weight: bolder; }
+  .mySectI .buttonMail {
+    width: 21%;
+    height: 40px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #9f449b;
+    box-shadow: 0 3px #9a0c7c;
+    padding: 10px 20px;
+    border-radius: 5px; }
+    .mySectI .buttonMail a {
+      text-decoration: none;
+      font-size: 1rem;
+      cursor: pointer; }
 
 .myForm #formularz label {
   display: inline-block;
@@ -404,7 +422,7 @@ section.CmyGrey {
     width: 90%; }
   .myForm #formularz div textarea {
     vertical-align: top;
-    height: 5em;
+    height: 9em;
     width: 90%; }
     .myForm #formularz div textarea .invalid {
       border: 3px solid red; }
@@ -449,7 +467,8 @@ section.CmyGrey {
 
 .grid-container {
   width: 100%;
-  max-width: 800px; }
+  max-width: 800px;
+  border: 2px solid red; }
 
 .row:after {
   content: "";
