@@ -69,17 +69,32 @@ a {
   text-decoration: none;
   color: inherit; }
 
+h1 {
+  margin-bottom: 1px;
+  color: white;
+  padding-top: 4rem;
+  font-size: 2.6rem; }
+
+h2 {
+  font-size: 1.4rem;
+  color: #8b8b8b;
+  font-weight: 400; }
+  h2 span {
+    color: #9f449b; }
+
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white; }
+
+h4 {
+  color: black; }
+
 .BackFramE {
   background-image: url("../images/C_frameBold.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain; }
-
-h2 {
-  font-size: 1.8rem;
-  color: #8b8b8b; }
-  h2 span {
-    color: #9f449b; }
 
 section.myTopHeader {
   background-image: url("../images/Bhagaskara_01.jpg");
@@ -87,31 +102,11 @@ section.myTopHeader {
   background-size: 100% auto;
   padding-bottom: 54%;
   height: 0; }
-  section.myTopHeader .col-12 {
-    font-size: 2rem; }
-    section.myTopHeader .col-12
-    :last-child {
-      padding-top: 1px; }
-  section.myTopHeader h1 {
-    margin-bottom: 1px;
-    color: white;
-    padding-top: 4rem;
-    font-size: 2.6rem; }
-  section.myTopHeader h2 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: white;
-    padding-top: 2rem;
-    padding-bottom: 14px; }
-  section.myTopHeader h3 {
-    font-size: 1rem;
-    font-weight: 400;
-    color: white; }
+  section.myTopHeader .col-12 :last-child {
+    padding-top: 1px; }
   section.myTopHeader .ico_shape:nth-child(-n+2),
   section.myTopHeader .ico_shape:nth-child(n+5):nth-child(-n+6) {
     margin-top: 9rem; }
-  section.myTopHeader h4 {
-    color: black; }
   section.myTopHeader .ico_shape {
     background-image: url("../images/ico_shape.png");
     background-size: 90% auto;
@@ -245,19 +240,27 @@ section.myWhite {
   height: 0; }
 
 .myQuotes {
-  padding: 6.5% 6.5%; }
+  padding: 6.5% 6.5%;
+  color: white;
+  font-size: 1.5rem; }
 
 .mySectF {
   background-color: white; }
-  .mySectF .col-12 img {
-    background-image: url("../images/F_arrow_backg.png");
-    background-repeat: no-repeat;
-    background-size: 100% auto; }
-    .mySectF .col-12 img:hover {
-      background-image: url("../images/F_arrow_backgHover.png");
-      cursor: pointer; }
-    .mySectF .col-12 img:nth-child(2) {
-      transform: rotate(180deg); }
+  .mySectF .col-12 img:hover {
+    content: url("../images/F_arrow_hov.png");
+    cursor: pointer; }
+  .mySectF .col-12 img:nth-child(2) {
+    transform: rotate(180deg); }
+  .mySectF .wrapperVis {
+    width: 750px;
+    border: 4px dotted mediumseagreen;
+    overflow: hidden; }
+    .mySectF .wrapperVis .wrapper {
+      width: 2000px; }
+      .mySectF .wrapperVis .wrapper .slid {
+        width: 250px;
+        float: left;
+        display: inline-block; }
   .mySectF .col-4 {
     padding: 0 50px 0 50px; }
     .mySectF .col-4 img {

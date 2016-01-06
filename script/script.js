@@ -1,11 +1,10 @@
 $( document ).ready(function() {
     console.log( "ready!" );
 
-//Sticky menu
+//Sticky menu with showing active paragraph
 
     $(function(){
 
-        //moze tez $(window).scroll()
 
         var menu = $(".B_myWhite");
         var lastPositionTop = 0;
@@ -16,20 +15,20 @@ $( document ).ready(function() {
         $(window).on("scroll", function(){
             if(menu.hasClass("sticky") === false && $(this).scrollTop() > menu.offset().top){
                 lastPositionTop = menu.offset().top;
-                menu.addClass("sticky"); //dodanie klasy, ale po spr. czy nie ma jej.
+                menu.addClass("sticky"); //if has no class, please add class.
                 menu.animate({
-                 //   height: (menuHeight).toString() + "px"
-                }, 500);
+
+                }, 5000);
             }
             if(menu.hasClass("sticky") && $(this).scrollTop() < lastPositionTop){
                 menu.removeClass("sticky");
                 menu.animate({
-                  //  height: (menuHeight).toString() + "px"
-                }, 500);
+
+                }, 5000);
             }
 
-            paragraphs.each(function(index){ // index tego paragrafu, wylicza z petli JS.
-                if(index + 1 == paragraphs.length){ // ostatni paragraf
+            paragraphs.each(function(index){ // This paragraph index is calculated in loop (JS func).
+                if(index + 1 == paragraphs.length){ // last paragraph
                     if( paragraphs.eq(index).offset().top < $(window).scrollTop()){
                         links.eq(index).addClass("active");
                     }
@@ -39,7 +38,7 @@ $( document ).ready(function() {
                 }
                 else {
                     if( paragraphs.eq(index).offset().top < $(window).scrollTop() &&  paragraphs.eq(index + 1).offset().top > $(window).scrollTop()){
-                        links.eq(index).addClass("active"); // wylacza po wlaczeniu, jak zjedziemy np z pkt 3 do pkt 6.
+                        links.eq(index).addClass("active");
                     }
                     else {
                         links.eq(index).removeClass("active");
@@ -55,7 +54,70 @@ $( document ).ready(function() {
 
     });
 
-//people
+
+
+//SLIDER, people
+
+   //control buttons
+
+
+    var scrollingTime = 1000;
+    var currentSlideIndex = 0;
+
+
+
+    var $box = $(".wrapperVis");
+    var $slaids = $box.find('.wrapper');
+    var $slaid = $slaids.find('.slid');
+
+    var numberOfSlaids = $slaid.length;
+
+
+    var first3Slaids = $slaids.find('.slid:lt(3)').clone();
+    var lastSlaid = $slaids.find('.slid:last-child').clone();
+
+    $slaids.append(first3Slaids);
+    $slaids.prepend(lastSlaid);
+
+    $('#ArrowLeft').on('click', moveLeft);
+    $('#ArrowRight').on('click', moveRight);
+
+
+
+    function moveLeft() {
+        $slaids.animate({
+            'margin-left': '+=250px'
+        }, 800, goToLastWhenStart)
+
+    }
+
+    function moveRight() {
+        $slaids.animate({
+            'margin-left': '-=250px'
+        }, 800, backToStartWhenFinish)
+    }
+
+    function goToLastWhenStart() {
+        currentSlideIndex--;
+        if(currentSlideIndex === -1) {
+            currentSlideIndex = numberOfSlaids-1;
+            $slaids.css('margin-left', -250*numberOfSlaids+'px');
+        }
+    }
+
+    function backToStartWhenFinish() {
+        currentSlideIndex++;
+
+        if(currentSlideIndex === numberOfSlaids) {
+            currentSlideIndex = 0;
+            $slaids.css('margin-left', 0);
+        }
+
+    }
+
+
+
+
 
 
 

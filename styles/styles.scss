@@ -75,6 +75,8 @@ table {
 
 
 
+
+
 //My styles
 $myViolet: #9f449b;
 $myVioletLight: #e69fd1;
@@ -116,6 +118,47 @@ a {
   color: inherit;
 }
 
+
+h1 {
+  margin-bottom: 1px;
+  color: white;
+  padding-top: 4rem;
+  font-size: 2.6rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: $myGreyDark;
+  font-weight: 400;
+
+  //padding: ;
+
+  span {
+    color: $myViolet;
+
+  }
+}
+
+
+
+h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: white;
+}
+
+
+h4 {
+  color: black;
+}
+
+
+
+
+
+
+
+
 .BackFramE {
   background-image: url("../images/C_frameBold.png");
   background-position: center;
@@ -124,15 +167,6 @@ a {
 
 }
 
-h2 {
-  font-size: 1.8rem;
-  color: $myGreyDark;
-
-  span {
-    color: $myViolet;
-
-  }
-}
 
 
 
@@ -149,36 +183,14 @@ section.myTopHeader {
 
 
   .col-12 {
-    font-size: 2rem;
 
-    &
+
     :last-child {
      padding-top: 1px;
     }
   }
 
-  h1 {
-    margin-bottom: 1px;
-    color: white;
-    padding-top: 4rem;
-    font-size: 2.6rem;
-  }
 
-  h2 {
-    font-size: 1.8rem;
-    font-weight: 400;
-    color: white;
-    padding-top: 2rem;
-    padding-bottom: 14px;
-  }
-
-
-
-  h3 {
-    font-size: 1rem;
-    font-weight: 400;
-    color: white;
-  }
 
   .ico_shape:nth-child(-n+2),
   .ico_shape:nth-child(n+5):nth-child(-n+6) {
@@ -186,10 +198,6 @@ section.myTopHeader {
     margin-top: 9rem;
   }
 
-
-  h4 {
-    color: black;
-  }
 
   .ico_shape {
     background-image: url('../images/ico_shape.png');
@@ -472,11 +480,14 @@ section.myWhite {
   background-size: 100% auto;
   padding-bottom: 31.2%; // wyliczenie (wysokosc/szerokoœæ) * 100
   height: 0;
+
 }
 
 
 .myQuotes {
   padding: 6.5% 6.5%;
+  color: white;
+  font-size: 1.5rem;
 
 
 }
@@ -487,13 +498,11 @@ section.myWhite {
 
     .col-12 {
       img {
-        background-image: url("../images/F_arrow_backg.png");
-        background-repeat: no-repeat;
-        background-size: 100% auto;
-      //  width: 4%;
+
 
         &:hover {
-          background-image: url("../images/F_arrow_backgHover.png");
+
+          content: url("../images/F_arrow_hov.png");
 
           cursor: pointer;
         }
@@ -502,6 +511,32 @@ section.myWhite {
         }
       }
     }
+
+  .wrapperVis {
+
+     width:  750px;
+     border: 4px dotted mediumseagreen;
+    overflow: hidden;
+
+
+
+    .wrapper {
+      width: 2000px;
+
+
+
+        .slid {
+            width: 250px;
+            float: left;
+            display: inline-block;
+
+        }
+
+
+    }
+
+
+  }
 
 
 
