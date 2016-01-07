@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+@charset "UTF-8";
 .animationBar1 {
   animation: myAnimBar1 2s 1, move 1s linear infinite; }
 @keyframes myAnimBar1 {
@@ -27,9 +27,6 @@
     width: 10%; }
   100% {
     width: 50%; } }
-=======
-@charset "UTF-8";
->>>>>>> a1eb1dc1113b5e0577ec44adc9b7b3dcdc3948cc
 .myFlex {
   display: flex;
   justify-content: center;
@@ -281,7 +278,6 @@ section.myWhite {
 
 .mySectF {
   background-color: white; }
-<<<<<<< HEAD
   .mySectF .col-12 img:hover {
     content: url("../images/F_arrow_hov.png");
     cursor: pointer; }
@@ -304,35 +300,12 @@ section.myWhite {
           margin-right: 10px; }
         .mySectF .wrapperVis .wrapper .slid h2 {
           padding: 25px 25px; }
-  .mySectF .col-4 {
-    padding: 0 50px 0 50px; }
-    .mySectF .col-4 img {
-      border: 3px solid #e8e8e8;
-=======
-  .mySectF .col-12 img {
-    background-image: url("../images/F_arrow_backg.png");
-    background-repeat: no-repeat;
-    background-size: 100% auto; }
-    .mySectF .col-12 img:hover {
-      background-image: url("../images/F_arrow_backgHover.png");
-      cursor: pointer; }
-    .mySectF .col-12 img:nth-child(2) {
-      transform: rotate(180deg); }
-  .mySectF .paczkaVisible {
-    width: 750px;
-    overflow: hidden;
-    border: 8px solid pink; }
-    .mySectF .paczkaVisible .paczka {
-      width: 1660px;
-      border: 5px double darkolivegreen;
-      text-align: left; }
   .mySectF .my4Slider {
     padding: 0 50px 0 50px;
     width: 250px;
     display: inline-block; }
     .mySectF .my4Slider img {
       border: 3px double #e8e8e8;
->>>>>>> a1eb1dc1113b5e0577ec44adc9b7b3dcdc3948cc
       width: 70%;
       border-radius: 50%;
       margin-right: 10px; }
@@ -349,7 +322,6 @@ section.myWhite {
     clear: both;
     background: #e8e8e8;
     width: 100%; }
-<<<<<<< HEAD
     .mySectF .col-6 .prog #progBar1 {
       background: #9f449b;
       height: 16px;
@@ -362,83 +334,47 @@ section.myWhite {
       background: #9f449b;
       height: 16px;
       width: 60%; }
-    .mySectF .col-6 .prog #progBar4 {
-      background: #9f449b;
+    .mySectF .col-6 .prog #progBar2 {
       height: 16px;
-      width: 50%; }
-=======
-    .mySectF .col-6 .prog > * {
-      background: #9f449b; }
-    .mySectF .col-6 .prog .animateProgBar {
-      animation: myAnimBar1 2s 1; }
-    .mySectF .col-6 .prog .animateProgBar2 {
-      background: repeating-linear-gradient(45deg, #9f449b 10%, #e669c6 15%);
-      animation: ruch 1s linear infinite; }
-    .mySectF .col-6 .prog #progBar1 {
-      height: 16px;
-      width: 90%; }
-@keyframes myAnimBar1 {
-  0% {
-    width: 15%; }
-  100% {
-    width: 90%; } }
-  .mySectF .col-6 #progBar2 {
-    height: 16px;
-    width: 70%;
-    animation: myAnimBar2 2s 1; }
-@keyframes myAnimBar2 {
-  0% {
-    width: 15%; }
-  100% {
-    width: 70%; } }
-  .mySectF .col-6 #progBar3 {
-    height: 16px;
-    width: 60%;
-    animation: myAnimBar3 2s 1; }
-@keyframes myAnimBar3 {
-  0% {
-    width: 15%; }
-  100% {
-    width: 60%; } }
-  .mySectF .col-6 #progBar4 {
-    height: 16px;
-    width: 85%;
-    animation: myAnimBar4 2s 1; }
->>>>>>> a1eb1dc1113b5e0577ec44adc9b7b3dcdc3948cc
-
+      width: 70%;
+      animation: myAnimBar2 2s 1; }
+      .mySectF .col-6 .prog #progBar2 #progBar4 {
+        background: #9f449b;
+        height: 16px;
+        width: 50%; }
 @keyframes ruch {
   from {
     background-position: 0 0; }
   to {
     background-position: 20px 0; } }
-.mySectH {
-  background-color: white; }
-  .mySectH h2 {
-    color: #9f449b; }
-  .mySectH h3 {
-    color: #8b8b8b;
-    padding-top: 0.8rem; }
-  .mySectH .bottomBelt .opakowanie {
-    width: 750px;
-    height: 320px;
-    overflow: hidden;
-    border: 6px dotted orangered; }
-    .mySectH .bottomBelt .opakowanie .slajdy {
-      display: block;
-      width: 3300px;
-      height: inherit;
-      margin-left: 0;
-      /* to animujemy i na koniec powrˇt do 0.*/
-      padding: 0; }
-      .mySectH .bottomBelt .opakowanie .slajdy .slajd {
-        float: left;
-        border: 2px dotted blue;
-        width: 750px;
-        height: auto; }
-        .mySectH .bottomBelt .opakowanie .slajdy .slajd img {
-          border-radius: 50%; }
-        .mySectH .bottomBelt .opakowanie .slajdy .slajd p {
-          padding: 20px 20px; }
+  .mySectF .mySectH {
+    background-color: white; }
+    .mySectF .mySectH h2 {
+      color: #9f449b; }
+    .mySectF .mySectH h3 {
+      color: #8b8b8b;
+      padding-top: 0.8rem; }
+    .mySectF .mySectH .bottomBelt .opakowanie {
+      width: 750px;
+      height: 320px;
+      overflow: hidden;
+      border: 6px dotted orangered; }
+      .mySectF .mySectH .bottomBelt .opakowanie .slajdy {
+        display: block;
+        width: 3300px;
+        height: inherit;
+        margin-left: 0;
+        /* to animujemy i na koniec powrˇt do 0.*/
+        padding: 0; }
+        .mySectF .mySectH .bottomBelt .opakowanie .slajdy .slajd {
+          float: left;
+          border: 2px dotted blue;
+          width: 750px;
+          height: auto; }
+          .mySectF .mySectH .bottomBelt .opakowanie .slajdy .slajd img {
+            border-radius: 50%; }
+          .mySectF .mySectH .bottomBelt .opakowanie .slajdy .slajd p {
+            padding: 20px 20px; }
 
 .mySectI {
   background-color: #fff;
