@@ -6,19 +6,23 @@ $( document ).ready(function() {
     $(function(){
 
 
+        var $body = $('body');
+
         var menu = $(".B_myWhite");
         var lastPositionTop = 0;
         var menuHeight = menu.height();
         var paragraphs = $("section");
         var links = $("nav a");
 
+
+
         $(window).on("scroll", function(){
             if(menu.hasClass("sticky") === false && $(this).scrollTop() > menu.offset().top){
                 lastPositionTop = menu.offset().top;
                 menu.addClass("sticky"); //if has no class, please add class.
-                menu.animate({
 
-                }, 5000);
+                $body.css("padding-top", menuHeight+"px"); //anty jump effect. SPROBOWAC TU Z DIV.
+
             }
             if(menu.hasClass("sticky") && $(this).scrollTop() < lastPositionTop){
                 menu.removeClass("sticky");
@@ -56,12 +60,10 @@ $( document ).ready(function() {
 
 
 
-//SLIDER, people
-
-   //control buttons
+//F, SLIDER, people
 
 
-    var scrollingTime = 1000;
+   var scrollingTime = 1000;
     var currentSlideIndex = 0;
 
 
@@ -115,8 +117,70 @@ $( document ).ready(function() {
 
     }
 
+//Bar animation
+
+    $(window).on('scroll', function () {
+        var $topOffset = $(this).scrollTop();
+        var $myWindowValueStart = 1640;
+        if ($topOffset >= $myWindowValueStart) {
+            console.log("scroolStart");
+
+           $("#progBar1").addClass('animationBar1');
+           $("#progBar2").addClass('animationBar2');
+           $("#progBar3").addClass('animationBar3');
+           $("#progBar4").addClass('animationBar4');
 
 
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+//Count 4 numbers
+
+
+    $(window).on('scroll', function () {
+        var $topOffset = $(this).scrollTop();
+        var $myWindowValueStart = 2500;
+        if ($topOffset >= $myWindowValueStart) {
+            console.log('juz!');
+
+            var myArrEq = [0,1,2,3];
+            var myArrValues = [365, 98, 69, 1642];
+            var eachValue;
+
+            for (i=0; i<myArrEq.length; i++) {
+
+            }
+
+
+            function countNumbers() {
+                $({countNum: $('.counter:eq(0)').text()}).animate({countNum: 365}, {
+                    duration: 2000,
+                    easing:'linear',
+                    step: function() {
+                        $('.counter:eq(0)').text(Math.floor(this.countNum));
+                    },
+                    complete: function() {
+                        $('.counter:eq(0)').text(this.countNum);
+                    }
+                });
+
+
+            }
+
+
+        }
+
+
+    });
 
 
 
@@ -186,11 +250,11 @@ $( document ).ready(function() {
         var name_length = input.val().length;
         if(name_length >= 5 && name_length <= 15){
             input.removeClass("invalid").addClass("valid");
-            input.next('.myKomunikat').text("Wprowadzono poprawną nazwę.").removeClass("blad").addClass("ok");
+            input.next('.myKomunikat').text("OK!").removeClass("blad").addClass("ok");
         }
         else{
             input.removeClass("valid").addClass("invalid");
-            input.next('.myKomunikat').text("Nazwa musi mieć więcej niż 4 i mniej niż 16 znaków!").removeClass("ok").addClass("blad");
+            input.next('.myKomunikat').text("Please enter more then 4 and less than 16 signs!").removeClass("ok").addClass("blad");
 
         }
     });
@@ -203,11 +267,11 @@ $( document ).ready(function() {
         var is_email = pattern.test(input.val());
         if(is_email){
             input.removeClass("invalid").addClass("valid");
-            input.next('.myKomunikat').text("Wprowadzono poprawny email.").removeClass("blad").addClass("ok");
+            input.next('.myKomunikat').text("OK!").removeClass("blad").addClass("ok");
         }
         else{
             input.removeClass("valid").addClass("invalid");
-            input.next('.myKomunikat').text("Wprowadź poprawny email!").removeClass("ok").addClass("blad");
+            input.next('.myKomunikat').text("Please enter correct email!").removeClass("ok").addClass("blad");
         }
     });
 
@@ -218,11 +282,11 @@ $( document ).ready(function() {
         var message = $(this).val();
         if(message){
             input.removeClass("invalid").addClass("valid");
-            input.next('.myKomunikat').text("Wprowadzono poprawną wiadomość.").removeClass("blad").addClass("ok");
+            input.next('.myKomunikat').text("OK!").removeClass("blad").addClass("ok");
         }
         else{
             input.removeClass("valid").addClass("invalid");
-            input.next('.myKomunikat').text("Wiadomość nie może być pusta!").removeClass("ok").addClass("blad");
+            input.next('.myKomunikat').text("Please write something!").removeClass("ok").addClass("blad");
         }
     });
 

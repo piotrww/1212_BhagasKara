@@ -1,3 +1,54 @@
+//Animation bars
+
+.animationBar1 {
+  animation: myAnimBar1 2s 1, move 1s linear infinite;
+
+  @keyframes myAnimBar1 {
+    0% {width: 10%;}
+    100% {width: 90%;}
+  }
+}
+
+.animationBar2 {
+
+  animation: myAnimBar2 2s 1, move 1s linear infinite;
+
+  @keyframes myAnimBar2 {
+    0% {width: 15%;}
+    100% {width: 70%;}
+  }
+}
+
+
+.animationBar3 {
+  animation: myAnimBar3 2s 1, move 1s linear infinite;
+
+  @keyframes myAnimBar3 {
+    0% {width: 15%;}
+    100% {width: 60%;}
+  }
+}
+
+
+
+.animationBar4 {
+  animation: myAnimBar4 2s 1, move 1s linear infinite;
+
+  @keyframes myAnimBar4 {
+    0% {width: 10%;}
+    100% {width: 50%;}
+  }
+
+}
+
+
+
+
+
+
+
+
+
 .myFlex {
   display: flex; //FLEX!
   justify-content: center;
@@ -324,6 +375,7 @@ nav.B_myWhite {
     //left: 0;
     width: 100%;
     z-index: +1;
+    //padding: 0;
 
 
   }
@@ -446,7 +498,8 @@ section.myWhite {
   //    }
   //}
 
-  .col-6:first-child {
+  .col-6:last-child {
+    line-height: 1.5;
 
     img {
       width: 100%;
@@ -456,17 +509,18 @@ section.myWhite {
 
 
   .buttonCTA {
-    width: 130px;
+    width: 40%;
     height: 40px;
+    margin-top: 20px;
     color: #fff;
     background-color: $myViolet;
-    box-shadow: 0 5px $myVioletDark;
+    box-shadow: 0 3px $myVioletDark;
     padding: 10px 20px;
     border-radius: 5px;
 
     a {
       text-decoration: none;
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
   }
 
@@ -512,6 +566,7 @@ section.myWhite {
       }
     }
 
+<<<<<<< HEAD
   .wrapperVis {
 
      width:  750px;
@@ -530,6 +585,18 @@ section.myWhite {
             float: left;
             display: inline-block;
 
+              img {
+                border: 3px solid $myGreyLight;
+                width: 70%;
+                border-radius: 50%;
+                margin-right: 10px;
+
+              }
+
+              h2 {
+                padding: 25px 25px;
+              }
+
         }
 
 
@@ -538,125 +605,195 @@ section.myWhite {
 
   }
 
+=======
+    .paczkaVisible {
+      width: 750px;
+      overflow: hidden;
+      border: 8px solid pink;
 
-
-  .col-4 {
-    padding: 0 50px 0 50px;
-
-    img {
-      border: 3px solid $myGreyLight;
-      width: 70%;
-      border-radius: 50%;
-      margin-right: 10px;
-
+      .paczka {
+        width: 1660px;
+        border: 5px double darkolivegreen;
+        text-align: left;
+      }
     }
-
-    h2 {
-      padding: 25px 25px;
-    }
-
-  }
-
-    .col-6 {
+>>>>>>> a1eb1dc1113b5e0577ec44adc9b7b3dcdc3948cc
 
 
-        p {
-          text-transform: uppercase;
-          padding-bottom: 5px;
 
+      .my4Slider {
+        padding: 0 50px 0 50px;
+        width: 250px;
+        display: inline-block;
 
-          &.left {
-            float: left;
-          }
+        img {
+          border: 3px double $myGreyLight;
+          width: 70%;
+          border-radius: 50%;
+          margin-right: 10px;
 
-          &.right {
-            float: right;
-          }
         }
 
+        h2 {
+          padding: 25px 25px;
+        }
 
-        .prog {
-          clear: both;
-          background: $myGreyLight;
-          width: 100%;
+      }
 
+        .col-6 {
+
+
+            p {
+              text-transform: uppercase;
+              padding-bottom: 5px;
+
+
+              &.left {
+                float: left;
+              }
+
+              &.right {
+                float: right;
+              }
+            }
+
+
+            .prog {
+              clear: both;
+              background: $myGreyLight;
+              width: 100%;
+
+<<<<<<< HEAD
           #progBar1 {
-            background: repeating-linear-gradient($myBcgVioletGradient);
+            background: $myViolet;
             height: 16px;
             width: 90%;
-            animation: myAnimBar1 2s 1, ruch 1s linear infinite;
-
-            @keyframes ruch {
-              from {
-                background-position: 0 0;
-              }
-              to {
-                background-position: 20px 0;
-              }
-            }
-
-            @keyframes myAnimBar1 {
-              0% {
-                width: 15%;
-              }
-              100% {
-                width: 90%;
-              }
-            }
 
           }
-        }
 
-            #progBar2 {
+
+          #progBar2 {
               background: $myViolet;
               height: 16px;
               width: 70%;
-              animation: myAnimBar2 2s 1;
 
-              @keyframes myAnimBar2 {
-                0% {width: 15%;}
-                100% {width: 70%;}
-              }
-            }
+          }
 
-            #progBar3 {
+
+          #progBar3 {
               background: $myViolet;
               height: 16px;
               width: 60%;
-              animation: myAnimBar3 2s 1;
 
-              @keyframes myAnimBar3 {
-                0% {width: 15%;}
-                100% {width: 60%;}
+          }
+
+=======
+              > * {
+                background: $myViolet;
+
+              }
+
+              .animateProgBar {
+                animation: myAnimBar1 2s 1;
+
+              }
+
+              .animateProgBar2 {
+                background: repeating-linear-gradient($myBcgVioletGradient);
+                animation: ruch 1s linear infinite;
+              }
+
+
+
+              #progBar1 {
+                height: 16px;
+                width: 90%;
+
+
+
+
+                @keyframes myAnimBar1 {
+                  0% {
+                    width: 15%;
+                  }
+                  100% {
+                    width: 90%;
+                  }
+                }
+
               }
             }
+>>>>>>> a1eb1dc1113b5e0577ec44adc9b7b3dcdc3948cc
 
+                #progBar2 {
+                  height: 16px;
+                  width: 70%;
+                  animation: myAnimBar2 2s 1;
 
-            #progBar4 {
+<<<<<<< HEAD
+          #progBar4 {
               background: $myViolet;
               height: 16px;
-              width: 85%;
-              animation: myAnimBar4 2s 1;
+              width: 50%;
+=======
+                  @keyframes myAnimBar2 {
+                    0% {width: 15%;}
+                    100% {width: 70%;}
+                  }
+                }
 
-            }
+                #progBar3 {
+
+                  height: 16px;
+                  width: 60%;
+                  animation: myAnimBar3 2s 1;
+
+                  @keyframes myAnimBar3 {
+                    0% {width: 15%;}
+                    100% {width: 60%;}
+                  }
+                }
+
+
+                #progBar4 {
+
+                  height: 16px;
+                  width: 85%;
+                  animation: myAnimBar4 2s 1;
+
+                }
+
+        }
+
+>>>>>>> a1eb1dc1113b5e0577ec44adc9b7b3dcdc3948cc
+
+          }
+
+        }
 
     }
 
 
+}
 
+//Animations on bars
 
+@keyframes ruch {
 
-
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 20px 0;
+  }
 }
 
 
 
 
 
-
-
 .mySectH {
-  background-color: $myGreyLight;
+  background-color: white;
 
   h2 {
     color: $myViolet;
@@ -668,48 +805,47 @@ section.myWhite {
   }
     .bottomBelt {
 
-          .kontener {
-            width: 100%;
-            height: 300px;
-            position: relative;
+
+          .opakowanie {
+            width: 750px;
+            height: 320px;
             overflow: hidden;
             border: 6px dotted orangered;
 
 
-            #s1 {
-              animation-delay: 0s;
 
-            }
 
-            #s2 {
-              animation-delay: 5s;
+                .slajdy {
+                  display: block;
+                  width: 3300px;
+                  height: inherit;
+                  margin-left: 0; /* to animujemy i na koniec powrót do 0.*/
+                  padding: 0;
 
-            }
 
-            .slajd {
-              position: absolute;
-              border: 2px dotted blue;
-              width: 100%;
-              height: auto;
-              animation: myAnim 10s infinite;
-              opacity: 0;
-
-                @keyframes myAnim{
-                  10%{opacity:1;}
-                  45%{opacity:0;}
-
-                }
+                      .slajd {
+                        float: left;
+                        border: 2px dotted blue;
+                        width: 750px;
+                        height: auto;
 
 
 
 
-                      img {
-                        border-radius: 50%;
-                      }
+                        img {
+                          border-radius: 50%;
+                        }
 
-                      p {
-                        padding: 20px 20px;
-                      }
+                        p {
+                          padding: 20px 20px;
+                        }
+
+
+
+                  }
+
+
+
 
             }
 
@@ -727,7 +863,7 @@ section.myWhite {
 
 
 .mySectI {
- // background-color: saddlebrown;
+  background-color: #fff;
   z-index: -1;
 
     img {
@@ -913,4 +1049,4 @@ section.myWhite {
   width: 90%;
 
 }
-
+//

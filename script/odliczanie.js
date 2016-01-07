@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    console.log('dzhhhhiala');
+    console.log('ready');
 
 
 
@@ -11,6 +11,7 @@ $( document ).ready(function() {
         if ($topOffset >= $myWindowValueStart) {
             console.log('juz!');
 
+<<<<<<< HEAD
             var myArrEq = [0,1,2,3];
             var myArrValues = [365, 98, 69, 1642];
             var eachValue;
@@ -18,7 +19,7 @@ $( document ).ready(function() {
                 for (i=0; i<myArrEq.length; i++) {
 
                 }
-            return
+            //return
 
 
             function countNumbers() {
@@ -36,90 +37,33 @@ $( document ).ready(function() {
 
             }
 
+=======
+            liczLiczbyPowyswietleniu();
+>>>>>>> a1eb1dc1113b5e0577ec44adc9b7b3dcdc3948cc
 
         }
+    })
+})
+
+function liczLiczbyPowyswietleniu() {
+    var myArr = [365,98,200,1756];
+
+    for (var i=0;i<myArr.length;i++) {
+        liczLiczbe(i,  myArr[i]);
+    }
+}
 
 
+function liczLiczbe(index, numb) {
+    var $myCounter =  $('.counter:eq('+ index +')');
+    $({countNum: $myCounter.text()}).animate({countNum: numb}, {
+        duration: 2000,
+        easing: 'linear',
+        step: function () {
+            $myCounter.text(Math.floor(this.countNum));
+        },
+        complete: function () {
+            $myCounter.text(this.countNum);
+        }
     });
-
-});
-
-
-//
-/////Let's build function :)
-//
-//
-//
-//
-//
-//
-//
-////Number counter 1
-//            $({countNum: $('.counter:eq(0)').text()}).animate({countNum: 365}, {
-//                duration: 2000,
-//                easing:'linear',
-//                step: function() {
-//                    $('.counter:eq(0)').text(Math.floor(this.countNum));
-//                },
-//                complete: function() {
-//                    $('.counter:eq(0)').text(this.countNum);
-//                }
-//            });
-//
-///// Number counter 2
-//
-//            $({countNum: $('.counter:eq(1)').text()}).animate({countNum: 98}, {
-//                duration: 2000,
-//                easing:'linear',
-//                step: function() {
-//                    $('.counter:eq(1)').text(Math.floor(this.countNum));
-//                },
-//                complete: function() {
-//                    $('.counter:eq(1)').text(this.countNum);
-//                }
-//            });
-//
-//// Number counter 3
-//
-//
-//            $({countNum: $('.counter:eq(2)').text()}).animate({countNum: 69}, {
-//                duration: 2000,
-//                easing:'linear',
-//                step: function() {
-//                    $('.counter:eq(2)').text(Math.floor(this.countNum));
-//                },
-//                complete: function() {
-//                    $('.counter:eq(2)').text(this.countNum);
-//                }
-//            });
-//
-//
-//////Number counter 4
-//
-//
-//            $({countNum: $('.counter:eq(3)').text()}).animate({countNum: 1642}, {
-//                duration: 2000,
-//                easing:'linear',
-//                step: function() {
-//                    $('.counter:eq(3)').text(Math.floor(this.countNum));
-//                },
-//                complete: function() {
-//                    $('.counter:eq(3)').text(this.countNum);
-//                }
-//            });
-//
-//
-//
-//
-//        }
-//
-//
-//    });
-//
-//
-//
-//
-//});
-//
-//
-//
+}

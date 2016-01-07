@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+.animationBar1 {
+  animation: myAnimBar1 2s 1, move 1s linear infinite; }
+@keyframes myAnimBar1 {
+  0% {
+    width: 10%; }
+  100% {
+    width: 90%; } }
+.animationBar2 {
+  animation: myAnimBar2 2s 1, move 1s linear infinite; }
+@keyframes myAnimBar2 {
+  0% {
+    width: 15%; }
+  100% {
+    width: 70%; } }
+.animationBar3 {
+  animation: myAnimBar3 2s 1, move 1s linear infinite; }
+@keyframes myAnimBar3 {
+  0% {
+    width: 15%; }
+  100% {
+    width: 60%; } }
+.animationBar4 {
+  animation: myAnimBar4 2s 1, move 1s linear infinite; }
+@keyframes myAnimBar4 {
+  0% {
+    width: 10%; }
+  100% {
+    width: 50%; } }
+=======
+@charset "UTF-8";
+>>>>>>> a1eb1dc1113b5e0577ec44adc9b7b3dcdc3948cc
 .myFlex {
   display: flex;
   justify-content: center;
@@ -217,20 +249,23 @@ section.myWhite {
   background-color: #ffffff;
   height: 390px;
   padding: 30px 30px; }
-  section.myWhite .col-6:first-child img {
-    width: 100%;
-    height: auto; }
+  section.myWhite .col-6:last-child {
+    line-height: 1.5; }
+    section.myWhite .col-6:last-child img {
+      width: 100%;
+      height: auto; }
   section.myWhite .buttonCTA {
-    width: 130px;
+    width: 40%;
     height: 40px;
+    margin-top: 20px;
     color: #fff;
     background-color: #9f449b;
-    box-shadow: 0 5px #9a0c7c;
+    box-shadow: 0 3px #9a0c7c;
     padding: 10px 20px;
     border-radius: 5px; }
     section.myWhite .buttonCTA a {
       text-decoration: none;
-      font-size: 1.5rem; }
+      font-size: 1rem; }
 
 .mySectE {
   background-image: url("../images/E_background_violet.png");
@@ -246,6 +281,7 @@ section.myWhite {
 
 .mySectF {
   background-color: white; }
+<<<<<<< HEAD
   .mySectF .col-12 img:hover {
     content: url("../images/F_arrow_hov.png");
     cursor: pointer; }
@@ -261,14 +297,46 @@ section.myWhite {
         width: 250px;
         float: left;
         display: inline-block; }
+        .mySectF .wrapperVis .wrapper .slid img {
+          border: 3px solid #e8e8e8;
+          width: 70%;
+          border-radius: 50%;
+          margin-right: 10px; }
+        .mySectF .wrapperVis .wrapper .slid h2 {
+          padding: 25px 25px; }
   .mySectF .col-4 {
     padding: 0 50px 0 50px; }
     .mySectF .col-4 img {
       border: 3px solid #e8e8e8;
+=======
+  .mySectF .col-12 img {
+    background-image: url("../images/F_arrow_backg.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto; }
+    .mySectF .col-12 img:hover {
+      background-image: url("../images/F_arrow_backgHover.png");
+      cursor: pointer; }
+    .mySectF .col-12 img:nth-child(2) {
+      transform: rotate(180deg); }
+  .mySectF .paczkaVisible {
+    width: 750px;
+    overflow: hidden;
+    border: 8px solid pink; }
+    .mySectF .paczkaVisible .paczka {
+      width: 1660px;
+      border: 5px double darkolivegreen;
+      text-align: left; }
+  .mySectF .my4Slider {
+    padding: 0 50px 0 50px;
+    width: 250px;
+    display: inline-block; }
+    .mySectF .my4Slider img {
+      border: 3px double #e8e8e8;
+>>>>>>> a1eb1dc1113b5e0577ec44adc9b7b3dcdc3948cc
       width: 70%;
       border-radius: 50%;
       margin-right: 10px; }
-    .mySectF .col-4 h2 {
+    .mySectF .my4Slider h2 {
       padding: 25px 25px; }
   .mySectF .col-6 p {
     text-transform: uppercase;
@@ -281,23 +349,40 @@ section.myWhite {
     clear: both;
     background: #e8e8e8;
     width: 100%; }
+<<<<<<< HEAD
     .mySectF .col-6 .prog #progBar1 {
-      background: repeating-linear-gradient(45deg, #9f449b 10%, #e669c6 15%);
+      background: #9f449b;
       height: 16px;
-      width: 90%;
-      animation: myAnimBar1 2s 1, ruch 1s linear infinite; }
-@keyframes ruch {
-  from {
-    background-position: 0 0; }
-  to {
-    background-position: 20px 0; } }
+      width: 90%; }
+    .mySectF .col-6 .prog #progBar2 {
+      background: #9f449b;
+      height: 16px;
+      width: 70%; }
+    .mySectF .col-6 .prog #progBar3 {
+      background: #9f449b;
+      height: 16px;
+      width: 60%; }
+    .mySectF .col-6 .prog #progBar4 {
+      background: #9f449b;
+      height: 16px;
+      width: 50%; }
+=======
+    .mySectF .col-6 .prog > * {
+      background: #9f449b; }
+    .mySectF .col-6 .prog .animateProgBar {
+      animation: myAnimBar1 2s 1; }
+    .mySectF .col-6 .prog .animateProgBar2 {
+      background: repeating-linear-gradient(45deg, #9f449b 10%, #e669c6 15%);
+      animation: ruch 1s linear infinite; }
+    .mySectF .col-6 .prog #progBar1 {
+      height: 16px;
+      width: 90%; }
 @keyframes myAnimBar1 {
   0% {
     width: 15%; }
   100% {
     width: 90%; } }
   .mySectF .col-6 #progBar2 {
-    background: #9f449b;
     height: 16px;
     width: 70%;
     animation: myAnimBar2 2s 1; }
@@ -307,7 +392,6 @@ section.myWhite {
   100% {
     width: 70%; } }
   .mySectF .col-6 #progBar3 {
-    background: #9f449b;
     height: 16px;
     width: 60%;
     animation: myAnimBar3 2s 1; }
@@ -317,46 +401,47 @@ section.myWhite {
   100% {
     width: 60%; } }
   .mySectF .col-6 #progBar4 {
-    background: #9f449b;
     height: 16px;
     width: 85%;
     animation: myAnimBar4 2s 1; }
+>>>>>>> a1eb1dc1113b5e0577ec44adc9b7b3dcdc3948cc
 
+@keyframes ruch {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: 20px 0; } }
 .mySectH {
-  background-color: #e8e8e8; }
+  background-color: white; }
   .mySectH h2 {
     color: #9f449b; }
   .mySectH h3 {
     color: #8b8b8b;
     padding-top: 0.8rem; }
-  .mySectH .bottomBelt .kontener {
-    width: 100%;
-    height: 300px;
-    position: relative;
+  .mySectH .bottomBelt .opakowanie {
+    width: 750px;
+    height: 320px;
     overflow: hidden;
     border: 6px dotted orangered; }
-    .mySectH .bottomBelt .kontener #s1 {
-      animation-delay: 0s; }
-    .mySectH .bottomBelt .kontener #s2 {
-      animation-delay: 5s; }
-    .mySectH .bottomBelt .kontener .slajd {
-      position: absolute;
-      border: 2px dotted blue;
-      width: 100%;
-      height: auto;
-      animation: myAnim 10s infinite;
-      opacity: 0; }
-@keyframes myAnim {
-  10% {
-    opacity: 1; }
-  45% {
-    opacity: 0; } }
-      .mySectH .bottomBelt .kontener .slajd img {
-        border-radius: 50%; }
-      .mySectH .bottomBelt .kontener .slajd p {
-        padding: 20px 20px; }
+    .mySectH .bottomBelt .opakowanie .slajdy {
+      display: block;
+      width: 3300px;
+      height: inherit;
+      margin-left: 0;
+      /* to animujemy i na koniec powrˇt do 0.*/
+      padding: 0; }
+      .mySectH .bottomBelt .opakowanie .slajdy .slajd {
+        float: left;
+        border: 2px dotted blue;
+        width: 750px;
+        height: auto; }
+        .mySectH .bottomBelt .opakowanie .slajdy .slajd img {
+          border-radius: 50%; }
+        .mySectH .bottomBelt .opakowanie .slajdy .slajd p {
+          padding: 20px 20px; }
 
 .mySectI {
+  background-color: #fff;
   z-index: -1; }
   .mySectI img {
     width: 100%;
