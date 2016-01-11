@@ -1,5 +1,5 @@
-//Animation bars
-
+////Animation bars
+//
 .animationBar1 {
   animation: myAnimBar1 2s 1, move 1s linear infinite;
 
@@ -114,15 +114,12 @@ table {
 
 //0, general settings
 
-@font-face
-
-{
+@font-face {
 
   font-family: Lato;
-
   src:url(../fonts/Lato-LigIta.ttf);
 
-}
+  }
 
 
 
@@ -282,67 +279,67 @@ section.myTopHeader {
 
 }
 
-
-
-
-
 //B White belt menu
 
-nav.B_myWhite {
+.B_myWhite {
   background-color: white;
   text-transform: uppercase;
   font-size: $fontSizeBeltMenu;
   color: $fontColorBeltMenu;
   padding: 1.7rem 1.7rem;
+  transition: padding 0.5s;
 
-  .belt_menu_row {
-    background-size: 100% auto;
-    z-index: +1;
-    }
+      .belt_menu_row {
+        background-size: 100% auto;
 
-  .nav-expanded {
-    display: block;
+      }
 
-  }
+      .nav-expanded {
+        display: block;
+
+      }
 
 
 
-  .menu_trigger {
+      .menu_trigger {
+        display: none;
+        font-size: larger;
+
+        @media screen and (max-width: 480px) {
+
+          display: block;
+          border-bottom: 2px solid $myViolet;
+          width: 60%;
+        }
+      }
+
+
+      .belt_menu li {
+        display: inline-block;
+        margin-right: 1rem;
+
+        &:hover {
+          color: $myViolet;
+
+        }
+      }
+
+
+
+
+    @media screen and (max-width: 480px) {
+
     display: none;
-    font-size: larger;
-
-    @media screen and (max-width: 480px) {
-
-      display: block;
-      border-bottom: 2px solid $myViolet;
-      width: 60%;
-    }
-  }
-
-
-  .belt_menu li {
-    display: inline-block;
-   margin-right: 1rem;
-
-    &:hover {
-      color: $myViolet;
-
-    }
-    @media screen and (max-width: 480px) {
-
-      display: none;
-      background-color: $myGreyLight;
-      border-bottom: 1px solid $myGreyDark;
+    background-color: $myGreyLight;
+    border-bottom: 1px solid $myGreyDark;
 
         &:last-child {
-           border-bottom: none;
+          border-bottom: none;
 
         }
 
 
     }
-  }
-
 
 
   h4 {
@@ -369,16 +366,16 @@ nav.B_myWhite {
       border-bottom: 1px solid $myViolet;
     }
 
-  &.sticky {
-    position: fixed;
-    top: 0;
-    //left: 0;
-    width: 100%;
-    z-index: +1;
-    //padding: 0;
 
+      &.sticky {
+        position: fixed;
+        top: 0;
+        //left: 0;
+        width: 100%;
+        z-index: +1;
+        padding: 0;
 
-  }
+      }
 
 
   .align_left {
@@ -389,15 +386,19 @@ nav.B_myWhite {
     text-align: right;
   }
 
+
 }
-
-
-
-
 
 //C grey section
 
 section.CmyGrey {
+
+  .antyJump {
+    border: 3px dotted deeppink;
+    height: 0;
+
+
+  }
 
 
   background-color: #eee;
@@ -458,8 +459,6 @@ section.CmyGrey {
   .C_icons3:hover {
     background-image: url('../images/B3_mug_violet.png');
 
-
-
   }
 
   .C_icons4 {
@@ -478,25 +477,22 @@ section.CmyGrey {
 
 }
 
-
-
-
 // D White section devices
 
-section.myWhite {
+.myWhite {
   background-color: #ffffff;
   height: 390px;
   padding: 30px 30px;
 
-  //h2 {
-  //  font-size: 1.8rem;
-  //  color: $myGreyDark;
-  //
-  //    span {
-  //      color: $myViolet;
-  //
-  //    }
-  //}
+  h2 {
+    font-size: 1.8rem;
+    color: $myGreyDark;
+
+      span {
+        color: $myViolet;
+
+      }
+  }
 
   .col-6:last-child {
     line-height: 1.5;
@@ -525,6 +521,7 @@ section.myWhite {
   }
 
 }
+
 //Section E, violet background
 
 .mySectE {
@@ -535,86 +532,85 @@ section.myWhite {
   padding-bottom: 31.2%; // wyliczenie (wysokosc/szerokoœæ) * 100
   height: 0;
 
+
+    .myQuotes {
+      padding: 6.5% 6.5%;
+      color: white;
+      font-size: 1.5rem;
+    }
 }
 
 
-.myQuotes {
-  padding: 6.5% 6.5%;
-  color: white;
-  font-size: 1.5rem;
 
 
-}
+
 //Section F, white widther background
 
 .mySectF {
   background-color: white;
 
     .col-12 {
-      img {
+          img {
 
+            &:hover {
 
-        &:hover {
+              content: url("../images/F_arrow_hov.png");
 
-          content: url("../images/F_arrow_hov.png");
+              cursor: pointer;
+            }
 
-          cursor: pointer;
-        }
-        &:nth-child(2) {
-          transform: rotate(180deg);
-        }
-      }
+            &:nth-child(2) {
+              transform: rotate(180deg);
+            }
+          }
     }
-  .wrapperVis {
 
-     width:  750px;
-     border: 4px dotted mediumseagreen;
-    overflow: hidden;
+    .wrapperVis {
 
+      width:  750px;
+      border: 4px dotted mediumseagreen;
+      overflow: hidden;
 
-
-    .wrapper {
-      width: 2000px;
-
+        .wrapper {
+          width: 2000px;
 
 
-        .slid {
-            width: 250px;
-            float: left;
-            display: inline-block;
 
-              img {
-                border: 3px solid $myGreyLight;
-                width: 70%;
-                border-radius: 50%;
-                margin-right: 10px;
+              .slid {
+                width: 250px;
+                float: left;
+                display: inline-block;
+
+                  img {
+                    border: 3px solid $myGreyLight;
+                    width: 70%;
+                    border-radius: 50%;
+                    margin-right: 10px;
+
+                  }
+
+                  h2 {
+                    padding: 25px 25px;
+                  }
 
               }
 
-              h2 {
-                padding: 25px 25px;
-              }
-
         }
 
-
     }
-
-
-  }
 
       .my4Slider {
         padding: 0 50px 0 50px;
         width: 250px;
         display: inline-block;
 
-        img {
-          border: 3px double $myGreyLight;
-          width: 70%;
-          border-radius: 50%;
-          margin-right: 10px;
+          img {
+            border: 3px double $myGreyLight;
+            width: 70%;
+            border-radius: 50%;
+            margin-right: 10px;
 
-        }
+          }
 
         h2 {
           padding: 25px 25px;
@@ -622,12 +618,12 @@ section.myWhite {
 
       }
 
-        .col-6 {
+      .col-6 {
 
 
-            p {
-              text-transform: uppercase;
-              padding-bottom: 5px;
+          p {
+            text-transform: uppercase;
+            padding-bottom: 5px;
 
 
               &.left {
@@ -640,10 +636,10 @@ section.myWhite {
             }
 
 
-            .prog {
-              clear: both;
-              background: $myGreyLight;
-              width: 100%;
+        .prog {
+             clear: both;
+             background: $myGreyLight;
+             width: 100%;
 
           #progBar1 {
             background: $myViolet;
@@ -669,10 +665,12 @@ section.myWhite {
           }
 
 
-                #progBar2 {
-                  height: 16px;
-                  width: 70%;
-                  animation: myAnimBar2 2s 1;
+          #progBar2 {
+            height: 16px;
+            width: 70%;
+            animation: myAnimBar2 2s 1;
+
+          }
 
           #progBar4 {
               background: $myViolet;
@@ -685,8 +683,8 @@ section.myWhite {
 
     }
 
-
 }
+
 
 //Animations on bars
 
@@ -705,7 +703,7 @@ section.myWhite {
 
 
 .mySectH {
-  background-color: white;
+  background-color: #fff;
 
   h2 {
     color: $myViolet;
@@ -715,6 +713,7 @@ section.myWhite {
     color: $myGreyDark;
     padding-top: 0.8rem;
   }
+
     .bottomBelt {
 
 
@@ -722,12 +721,9 @@ section.myWhite {
             width: 750px;
             height: 320px;
             overflow: hidden;
-            border: 6px dotted orangered;
-
-
-
 
                 .slajdy {
+                  border: 3px dotted firebrick;
                   display: block;
                   width: 3300px;
                   height: inherit;
@@ -736,7 +732,7 @@ section.myWhite {
 
                   .slajd {
                     float: left;
-                    border: 2px dotted blue;
+                    border: 2px dotted hotpink;
                     width: 750px;
                     height: auto;
 
@@ -751,7 +747,7 @@ section.myWhite {
                   }
 
                 }
-            }
+
 
           }
 
@@ -762,8 +758,9 @@ section.myWhite {
 
     }
 
-
 }
+
+
 
 
 .mySectI {
@@ -920,10 +917,10 @@ section.myWhite {
 }
 
 .row:after {
-  content: "";
-  clear: both;
-  display: block;
-}
+   content: "";
+   clear: both;
+   display: block;
+ }
 [class*="col-"] {
   float: left;
   padding: 15px;
@@ -953,4 +950,4 @@ section.myWhite {
   width: 90%;
 
 }
-//
+

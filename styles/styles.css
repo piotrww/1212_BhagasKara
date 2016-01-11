@@ -154,54 +154,55 @@ section.myTopHeader {
     background-image: url(../images/A_scroller_violet.png);
     cursor: pointer; }
 
-nav.B_myWhite {
+.B_myWhite {
   background-color: white;
   text-transform: uppercase;
   font-size: 0.9rem;
   color: #000000;
-  padding: 1.7rem 1.7rem; }
-  nav.B_myWhite .belt_menu_row {
-    background-size: 100% auto;
-    z-index: +1; }
-  nav.B_myWhite .nav-expanded {
+  padding: 1.7rem 1.7rem;
+  transition: padding 0.5s; }
+  .B_myWhite .belt_menu_row {
+    background-size: 100% auto; }
+  .B_myWhite .nav-expanded {
     display: block; }
-  nav.B_myWhite .menu_trigger {
+  .B_myWhite .menu_trigger {
     display: none;
     font-size: larger; }
     @media screen and (max-width: 480px) {
-      nav.B_myWhite .menu_trigger {
+      .B_myWhite .menu_trigger {
         display: block;
         border-bottom: 2px solid #9f449b;
         width: 60%; } }
-  nav.B_myWhite .belt_menu li {
+  .B_myWhite .belt_menu li {
     display: inline-block;
     margin-right: 1rem; }
-    nav.B_myWhite .belt_menu li:hover {
+    .B_myWhite .belt_menu li:hover {
       color: #9f449b; }
-    @media screen and (max-width: 480px) {
-      nav.B_myWhite .belt_menu li {
-        display: none;
-        background-color: #e8e8e8;
-        border-bottom: 1px solid #8b8b8b; }
-        nav.B_myWhite .belt_menu li:last-child {
-          border-bottom: none; } }
-  nav.B_myWhite h4 {
+  @media screen and (max-width: 480px) {
+    .B_myWhite {
+      display: none;
+      background-color: #e8e8e8;
+      border-bottom: 1px solid #8b8b8b; }
+      .B_myWhite:last-child {
+        border-bottom: none; } }
+  .B_myWhite h4 {
     transition-property: opacity;
     transition-duration: 1.5s; }
     @media screen and (max-width: 480px) {
-      nav.B_myWhite h4 {
+      .B_myWhite h4 {
         opacity: 0; } }
-  nav.B_myWhite a.active {
+  .B_myWhite a.active {
     color: #9f449b;
     border-bottom: 1px solid #9f449b; }
-  nav.B_myWhite.sticky {
+  .B_myWhite.sticky {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: +1; }
-  nav.B_myWhite .align_left {
+    z-index: +1;
+    padding: 0; }
+  .B_myWhite .align_left {
     text-align: left; }
-  nav.B_myWhite .align_right {
+  .B_myWhite .align_right {
     text-align: right; }
 
 section.CmyGrey {
@@ -209,6 +210,9 @@ section.CmyGrey {
   height: 590px;
   padding-top: 110px;
   padding-bottom: 110px; }
+  section.CmyGrey .antyJump {
+    border: 3px dotted deeppink;
+    height: 0; }
   section.CmyGrey h2 {
     padding: 28px 0 28px 0;
     font-size: 1rem; }
@@ -242,16 +246,21 @@ section.CmyGrey {
   section.CmyGrey .C_icons4:hover {
     background-image: url("../images/B4_phone_violet.png"); }
 
-section.myWhite {
+.myWhite {
   background-color: #ffffff;
   height: 390px;
   padding: 30px 30px; }
-  section.myWhite .col-6:last-child {
+  .myWhite h2 {
+    font-size: 1.8rem;
+    color: #8b8b8b; }
+    .myWhite h2 span {
+      color: #9f449b; }
+  .myWhite .col-6:last-child {
     line-height: 1.5; }
-    section.myWhite .col-6:last-child img {
+    .myWhite .col-6:last-child img {
       width: 100%;
       height: auto; }
-  section.myWhite .buttonCTA {
+  .myWhite .buttonCTA {
     width: 40%;
     height: 40px;
     margin-top: 20px;
@@ -260,7 +269,7 @@ section.myWhite {
     box-shadow: 0 3px #9a0c7c;
     padding: 10px 20px;
     border-radius: 5px; }
-    section.myWhite .buttonCTA a {
+    .myWhite .buttonCTA a {
       text-decoration: none;
       font-size: 1rem; }
 
@@ -270,11 +279,10 @@ section.myWhite {
   background-size: 100% auto;
   padding-bottom: 31.2%;
   height: 0; }
-
-.myQuotes {
-  padding: 6.5% 6.5%;
-  color: white;
-  font-size: 1.5rem; }
+  .mySectE .myQuotes {
+    padding: 6.5% 6.5%;
+    color: white;
+    font-size: 1.5rem; }
 
 .mySectF {
   background-color: white; }
@@ -338,43 +346,44 @@ section.myWhite {
       height: 16px;
       width: 70%;
       animation: myAnimBar2 2s 1; }
-      .mySectF .col-6 .prog #progBar2 #progBar4 {
-        background: #9f449b;
-        height: 16px;
-        width: 50%; }
+    .mySectF .col-6 .prog #progBar4 {
+      background: #9f449b;
+      height: 16px;
+      width: 50%; }
+
 @keyframes ruch {
   from {
     background-position: 0 0; }
   to {
     background-position: 20px 0; } }
-  .mySectF .mySectH {
-    background-color: white; }
-    .mySectF .mySectH h2 {
-      color: #9f449b; }
-    .mySectF .mySectH h3 {
-      color: #8b8b8b;
-      padding-top: 0.8rem; }
-    .mySectF .mySectH .bottomBelt .opakowanie {
-      width: 750px;
-      height: 320px;
-      overflow: hidden;
-      border: 6px dotted orangered; }
-      .mySectF .mySectH .bottomBelt .opakowanie .slajdy {
-        display: block;
-        width: 3300px;
-        height: inherit;
-        margin-left: 0;
-        /* to animujemy i na koniec powrˇt do 0.*/
-        padding: 0; }
-        .mySectF .mySectH .bottomBelt .opakowanie .slajdy .slajd {
-          float: left;
-          border: 2px dotted blue;
-          width: 750px;
-          height: auto; }
-          .mySectF .mySectH .bottomBelt .opakowanie .slajdy .slajd img {
-            border-radius: 50%; }
-          .mySectF .mySectH .bottomBelt .opakowanie .slajdy .slajd p {
-            padding: 20px 20px; }
+.mySectH {
+  background-color: #fff; }
+  .mySectH h2 {
+    color: #9f449b; }
+  .mySectH h3 {
+    color: #8b8b8b;
+    padding-top: 0.8rem; }
+  .mySectH .bottomBelt .opakowanie {
+    width: 750px;
+    height: 320px;
+    overflow: hidden; }
+    .mySectH .bottomBelt .opakowanie .slajdy {
+      border: 3px dotted firebrick;
+      display: block;
+      width: 3300px;
+      height: inherit;
+      margin-left: 0;
+      /* to animujemy i na koniec powrˇt do 0.*/
+      padding: 0; }
+      .mySectH .bottomBelt .opakowanie .slajdy .slajd {
+        float: left;
+        border: 2px dotted hotpink;
+        width: 750px;
+        height: auto; }
+        .mySectH .bottomBelt .opakowanie .slajdy .slajd img {
+          border-radius: 50%; }
+        .mySectH .bottomBelt .opakowanie .slajdy .slajd p {
+          padding: 20px 20px; }
 
 .mySectI {
   background-color: #fff;

@@ -2,119 +2,119 @@ $( document ).ready(function() {
     console.log( "ready!" );
 
 //Sticky menu with showing active paragraph
+    var $body = $('body');
+    var $secGrey = $('.CmyGrey');
+    var $antyJump = $('.antyJump');
+    var menu = $(".B_myWhite");
+    var paragraphs = $("section");
+    var links = $("nav a");
 
-    $(function(){
+    $(window).on('scroll', function () {
+        tryCreateStickyMenu() // ine funkcje reagujace na scroll
+    })
 
 
-        var $body = $('body');
+    var lastPositionTop = 0;
 
-        var menu = $(".B_myWhite");
-        var lastPositionTop = 0;
+    function tryCreateStickyMenu(){
         var menuHeight = menu.height();
-        var paragraphs = $("section");
-        var links = $("nav a");
+        if(menu.hasClass("sticky") === false && $(this).scrollTop() > menu.offset().top){
+            lastPositionTop = menu.offset().top;
+            menu.addClass("sticky"); //if has no class, please add class.
+
+            //$secGrey.css("background-color", "red"); //anty jump effect. SPROBOWAC TU Z DIV.
+                        //$antyJump.css("height", stickyHeight+"px"); //anty jump effect. SPROBOWAC TU Z DIV.
+                        //console.log(stickyHeight);
+            $antyJump.css("height", menuHeight+"px");
 
 
+        }
+        if(menu.hasClass("sticky") && $(this).scrollTop() < lastPositionTop){
+            menu.removeClass("sticky");
+            menu.animate({
 
-        $(window).on("scroll", function(){
-            if(menu.hasClass("sticky") === false && $(this).scrollTop() > menu.offset().top){
-                lastPositionTop = menu.offset().top;
-                menu.addClass("sticky"); //if has no class, please add class.
+            }, 5000);
+        }
 
-                $body.css("padding-top", menuHeight+"px"); //anty jump effect. SPROBOWAC TU Z DIV.
-
-            }
-            if(menu.hasClass("sticky") && $(this).scrollTop() < lastPositionTop){
-                menu.removeClass("sticky");
-                menu.animate({
-
-                }, 5000);
-            }
-
-            paragraphs.each(function(index){ // This paragraph index is calculated in loop (JS func).
-                if(index + 1 == paragraphs.length){ // last paragraph
-                    if( paragraphs.eq(index).offset().top < $(window).scrollTop()){
-                        links.eq(index).addClass("active");
-                    }
-                    else {
-                        links.eq(index).removeClass("active");
-                    }
+        paragraphs.each(function(index){ // This paragraph index is calculated in loop (JS func).
+            if(index + 1 == paragraphs.length){ // last paragraph
+                if( paragraphs.eq(index).offset().top < $(window).scrollTop()){
+                    links.eq(index).addClass("active");
                 }
                 else {
-                    if( paragraphs.eq(index).offset().top < $(window).scrollTop() &&  paragraphs.eq(index + 1).offset().top > $(window).scrollTop()){
-                        links.eq(index).addClass("active");
-                    }
-                    else {
-                        links.eq(index).removeClass("active");
-                    }
+                    links.eq(index).removeClass("active");
                 }
-
-            });
+            }
+            else {
+                if( paragraphs.eq(index).offset().top < $(window).scrollTop() &&  paragraphs.eq(index + 1).offset().top > $(window).scrollTop()){
+                    links.eq(index).addClass("active");
+                }
+                else {
+                    links.eq(index).removeClass("active");
+                }
+            }
 
         });
 
+    }
 
-
-
-    });
 
 
 
 //F, SLIDER, people
+    function activateSlider() {
+
+        var scrollingTime = 1000;
+        var currentSlideIndex = 0;
 
 
-   var scrollingTime = 1000;
-    var currentSlideIndex = 0;
+        var $box = $(".wrapperVis");
+        var $slaids = $box.find('.wrapper');
+        var $slaid = $slaids.find('.slid');
+
+        var numberOfSlaids = $slaid.length;
 
 
+        var first3Slaids = $slaids.find('.slid:lt(3)').clone();
+        var lastSlaid = $slaids.find('.slid:last-child').clone();
 
-    var $box = $(".wrapperVis");
-    var $slaids = $box.find('.wrapper');
-    var $slaid = $slaids.find('.slid');
+        $slaids.append(first3Slaids);
+        $slaids.prepend(lastSlaid);
 
-    var numberOfSlaids = $slaid.length;
-
-
-    var first3Slaids = $slaids.find('.slid:lt(3)').clone();
-    var lastSlaid = $slaids.find('.slid:last-child').clone();
-
-    $slaids.append(first3Slaids);
-    $slaids.prepend(lastSlaid);
-
-    $('#ArrowLeft').on('click', moveLeft);
-    $('#ArrowRight').on('click', moveRight);
+        $('#ArrowLeft').on('click', moveLeft);
+        $('#ArrowRight').on('click', moveRight);
 
 
+        function moveLeft() {
+            $slaids.animate({
+                'margin-left': '+=250px'
+            }, 800, goToLastWhenStart)
 
-    function moveLeft() {
-        $slaids.animate({
-            'margin-left': '+=250px'
-        }, 800, goToLastWhenStart)
-
-    }
-
-    function moveRight() {
-        $slaids.animate({
-            'margin-left': '-=250px'
-        }, 800, backToStartWhenFinish)
-    }
-
-    function goToLastWhenStart() {
-        currentSlideIndex--;
-        if(currentSlideIndex === -1) {
-            currentSlideIndex = numberOfSlaids-1;
-            $slaids.css('margin-left', -250*numberOfSlaids+'px');
-        }
-    }
-
-    function backToStartWhenFinish() {
-        currentSlideIndex++;
-
-        if(currentSlideIndex === numberOfSlaids) {
-            currentSlideIndex = 0;
-            $slaids.css('margin-left', 0);
         }
 
+        function moveRight() {
+            $slaids.animate({
+                'margin-left': '-=250px'
+            }, 800, backToStartWhenFinish)
+        }
+
+        function goToLastWhenStart() {
+            currentSlideIndex--;
+            if (currentSlideIndex === -1) {
+                currentSlideIndex = numberOfSlaids - 1;
+                $slaids.css('margin-left', -250 * numberOfSlaids + 'px');
+            }
+        }
+
+        function backToStartWhenFinish() {
+            currentSlideIndex++;
+
+            if (currentSlideIndex === numberOfSlaids) {
+                currentSlideIndex = 0;
+                $slaids.css('margin-left', 0);
+            }
+
+        }
     }
 
 //Bar animation
