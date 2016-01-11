@@ -2,31 +2,33 @@ $( document ).ready(function() {
     console.log( "ready!" );
 
 
-    var szybkoscPrzewijania = 1000;
-    var obecnySlajd = 1;
+    var speedOfScrolling = 4100;
+    var currentSlaid = 1;
 
 
 
-    var $opakowanie = $(".opakowanie");
-    var $slajdy = $opakowanie.find('.slajdy');
-    var $slajd = $slajdy.find('.slajd');
+    var $opakowanie = $(".HRwrapper");
+    var $slajdy = $opakowanie.find('.AllSlaids');
+    var $slajd = $slajdy.find('.slaid');
 
 
     setInterval(function() {
             $slajdy.animate(
                 {'margin-left': '-=750px'},
-                2000,
-                function() {
-                    obecnySlajd++;//Ale czemu tu te¿, bo zlicza?
-
-                    if(obecnySlajd === $slajd.length) {
-                        obecnySlajd = 1;
-                        $slajdy.css('margin-left', 0);
-                    }
-
-                });
+                2000, revertToFirstSlaid()
+                );
         },
-        3000);
+        speedOfScrolling);
 
+
+    function revertToFirstSlaid() {
+        currentSlaid++;//Ale czemu tu te¿, bo zlicza?
+
+        if(currentSlaid === $slajd.length) {
+            currentSlaid = 1;
+            $slajdy.css('margin-left', 0);
+        }
+
+    }
 
 });

@@ -287,7 +287,7 @@ section.myTopHeader {
   font-size: $fontSizeBeltMenu;
   color: $fontColorBeltMenu;
   padding: 1.7rem 1.7rem;
-  transition: padding 0.5s;
+  transition: padding 1s;
 
       .belt_menu_row {
         background-size: 100% auto;
@@ -392,13 +392,6 @@ section.myTopHeader {
 //C grey section
 
 section.CmyGrey {
-
-  .antyJump {
-    border: 3px dotted deeppink;
-    height: 0;
-
-
-  }
 
 
   background-color: #eee;
@@ -570,6 +563,7 @@ section.CmyGrey {
       width:  750px;
       border: 4px dotted mediumseagreen;
       overflow: hidden;
+      margin: auto;
 
         .wrapper {
           width: 2000px;
@@ -665,13 +659,6 @@ section.CmyGrey {
           }
 
 
-          #progBar2 {
-            height: 16px;
-            width: 70%;
-            animation: myAnimBar2 2s 1;
-
-          }
-
           #progBar4 {
               background: $myViolet;
               height: 16px;
@@ -717,22 +704,22 @@ section.CmyGrey {
     .bottomBelt {
 
 
-          .opakowanie {
+          .HRwrapper {
             width: 750px;
             height: 320px;
             overflow: hidden;
 
-                .slajdy {
-                  border: 3px dotted firebrick;
+                .AllSlaids {
+               //   border: 3px dotted firebrick;
                   display: block;
                   width: 3300px;
                   height: inherit;
                   margin-left: 0; /* to animujemy i na koniec powrót do 0.*/
                   padding: 0;
 
-                  .slajd {
+                  .slaid {
                     float: left;
-                    border: 2px dotted hotpink;
+                 //   border: 2px dotted hotpink;
                     width: 750px;
                     height: auto;
 

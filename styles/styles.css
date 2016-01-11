@@ -160,7 +160,7 @@ section.myTopHeader {
   font-size: 0.9rem;
   color: #000000;
   padding: 1.7rem 1.7rem;
-  transition: padding 0.5s; }
+  transition: padding 1s; }
   .B_myWhite .belt_menu_row {
     background-size: 100% auto; }
   .B_myWhite .nav-expanded {
@@ -210,9 +210,6 @@ section.CmyGrey {
   height: 590px;
   padding-top: 110px;
   padding-bottom: 110px; }
-  section.CmyGrey .antyJump {
-    border: 3px dotted deeppink;
-    height: 0; }
   section.CmyGrey h2 {
     padding: 28px 0 28px 0;
     font-size: 1rem; }
@@ -294,7 +291,8 @@ section.CmyGrey {
   .mySectF .wrapperVis {
     width: 750px;
     border: 4px dotted mediumseagreen;
-    overflow: hidden; }
+    overflow: hidden;
+    margin: auto; }
     .mySectF .wrapperVis .wrapper {
       width: 2000px; }
       .mySectF .wrapperVis .wrapper .slid {
@@ -342,10 +340,6 @@ section.CmyGrey {
       background: #9f449b;
       height: 16px;
       width: 60%; }
-    .mySectF .col-6 .prog #progBar2 {
-      height: 16px;
-      width: 70%;
-      animation: myAnimBar2 2s 1; }
     .mySectF .col-6 .prog #progBar4 {
       background: #9f449b;
       height: 16px;
@@ -363,26 +357,24 @@ section.CmyGrey {
   .mySectH h3 {
     color: #8b8b8b;
     padding-top: 0.8rem; }
-  .mySectH .bottomBelt .opakowanie {
+  .mySectH .bottomBelt .HRwrapper {
     width: 750px;
     height: 320px;
     overflow: hidden; }
-    .mySectH .bottomBelt .opakowanie .slajdy {
-      border: 3px dotted firebrick;
+    .mySectH .bottomBelt .HRwrapper .AllSlaids {
       display: block;
       width: 3300px;
       height: inherit;
       margin-left: 0;
       /* to animujemy i na koniec powrˇt do 0.*/
       padding: 0; }
-      .mySectH .bottomBelt .opakowanie .slajdy .slajd {
+      .mySectH .bottomBelt .HRwrapper .AllSlaids .slaid {
         float: left;
-        border: 2px dotted hotpink;
         width: 750px;
         height: auto; }
-        .mySectH .bottomBelt .opakowanie .slajdy .slajd img {
+        .mySectH .bottomBelt .HRwrapper .AllSlaids .slaid img {
           border-radius: 50%; }
-        .mySectH .bottomBelt .opakowanie .slajdy .slajd p {
+        .mySectH .bottomBelt .HRwrapper .AllSlaids .slaid p {
           padding: 20px 20px; }
 
 .mySectI {

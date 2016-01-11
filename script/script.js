@@ -62,7 +62,6 @@ $( document ).ready(function() {
 
 
 //F, SLIDER, people
-    function activateSlider() {
 
         var scrollingTime = 1000;
         var currentSlideIndex = 0;
@@ -86,6 +85,7 @@ $( document ).ready(function() {
 
 
         function moveLeft() {
+            console.log("click left");
             $slaids.animate({
                 'margin-left': '+=250px'
             }, 800, goToLastWhenStart)
@@ -93,6 +93,7 @@ $( document ).ready(function() {
         }
 
         function moveRight() {
+            console.log("click right");
             $slaids.animate({
                 'margin-left': '-=250px'
             }, 800, backToStartWhenFinish)
@@ -115,7 +116,6 @@ $( document ).ready(function() {
             }
 
         }
-    }
 
 //Bar animation
 
@@ -124,6 +124,8 @@ $( document ).ready(function() {
         var $myWindowValueStart = 1640;
         if ($topOffset >= $myWindowValueStart) {
             console.log("scroolStart");
+
+
 
            $("#progBar1").addClass('animationBar1');
            $("#progBar2").addClass('animationBar2');
@@ -145,47 +147,88 @@ $( document ).ready(function() {
 
 //Count 4 numbers
 
+    $( document ).ready(function() {
+        console.log('ready');
 
-    $(window).on('scroll', function () {
-        var $topOffset = $(this).scrollTop();
-        var $myWindowValueStart = 2500;
-        if ($topOffset >= $myWindowValueStart) {
-            console.log('juz!');
+///Function start when scroll top is 500 or more.
 
-            var myArrEq = [0,1,2,3];
-            var myArrValues = [365, 98, 69, 1642];
-            var eachValue;
 
-            for (i=0; i<myArrEq.length; i++) {
+        $(window).on('scroll', tryToCount);
 
+
+
+        function tryToCount () {
+            var $topOffset = $(window).scrollTop();
+            var $myWindowValueStart = 2590;
+
+            if ($topOffset >= $myWindowValueStart) { // myAnimated == false - dzialaloby ale to zbedny zapis
+                console.log('Already scrolled!');
+                CountNumbersAfterScrool();
+                $(window).off('scroll', tryToCount);//wylaczenie tego co na starcie
             }
-
-
-            function countNumbers() {
-                $({countNum: $('.counter:eq(0)').text()}).animate({countNum: 365}, {
-                    duration: 2000,
-                    easing:'linear',
-                    step: function() {
-                        $('.counter:eq(0)').text(Math.floor(this.countNum));
-                    },
-                    complete: function() {
-                        $('.counter:eq(0)').text(this.countNum);
-                    }
-                });
-
-
-            }
-
-
         }
+
+        function CountNumbersAfterScrool() {
+            var myArr = [365,98,200,1756];
+
+            for (var i=0;i<myArr.length;i++) {
+                CountNumber(i,  myArr[i]);
+                console.log(i);
+            }
+        }
+
+        function CountNumber(index, numb) {
+            var $myCounter =  $('.counter:eq('+ index +')');
+
+            var times = 100;
+
+            for(var i=0; i < times; i++) {
+                setTimeout(count, i*20, numb, i);
+            }
+
+            function count(numb, i) {
+                $myCounter.text(Math.floor(numb * i/times));
+            }
+        }
+
 
 
     });
 
 
+//Slider
+
+    $( document ).ready(function() {
+        console.log( "ready!" );
+
+        var speedOfScrolling = 4100;
+        var currentSlaid = 1;
+
+        var $opakowanie = $(".HRwrapper");
+        var $slajdy = $opakowanie.find('.AllSlaids');
+        var $slajd = $slajdy.find('.slaid');
 
 
+        setInterval(function() {
+                $slajdy.animate(
+                    {'margin-left': '-=750px'},
+                    2000, revertToFirstSlaid()
+                );
+            },
+            speedOfScrolling);
 
+
+        function revertToFirstSlaid() {
+            currentSlaid++;//Ale czemu tu też, bo zlicza?
+
+            if(currentSlaid === $slajd.length) {
+                currentSlaid = 1;
+                $slajdy.css('margin-left', 0);
+            }
+
+        }
+
+    });
 
 
 
