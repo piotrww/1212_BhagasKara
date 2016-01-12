@@ -540,6 +540,10 @@ section.CmyGrey {
       padding: 6.5% 6.5%;
       color: white;
       font-size: 1.5rem;
+
+      img {
+        width: 16%;
+      }
     }
 }
 
@@ -718,6 +722,7 @@ section.CmyGrey {
             width: 750px;
             height: 320px;
             overflow: hidden;
+            margin-left: calc(50% - #{375px});; //375 = po³owa elementu slaid
 
                 .AllSlaids {
                //   border: 3px dotted firebrick;

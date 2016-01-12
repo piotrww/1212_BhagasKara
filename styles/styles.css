@@ -286,6 +286,8 @@ section.CmyGrey {
     padding: 6.5% 6.5%;
     color: white;
     font-size: 1.5rem; }
+    .mySectE .myQuotes img {
+      width: 16%; }
 
 .mySectF {
   background-color: white; }
@@ -366,7 +368,8 @@ section.CmyGrey {
   .mySectH .bottomBelt .HRwrapper {
     width: 750px;
     height: 320px;
-    overflow: hidden; }
+    overflow: hidden;
+    margin-left: calc(50% - 375px); }
     .mySectH .bottomBelt .HRwrapper .AllSlaids {
       display: block;
       width: 3300px;
