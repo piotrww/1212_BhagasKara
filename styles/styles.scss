@@ -928,7 +928,7 @@ section.CmyGrey {
 .grid-container {
   width : 100%;
   max-width : 800px;
-  border: 2px solid red;
+ // border: 2px solid red;
 }
 
 .row:after {
@@ -939,7 +939,7 @@ section.CmyGrey {
 [class*="col-"] {
   float: left;
   padding: 15px;
-  border: $myBorder2;
+  //border: $myBorder2;
 }
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
