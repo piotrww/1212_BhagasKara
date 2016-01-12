@@ -133,9 +133,10 @@ h4 {
 section.myTopHeader {
   background-image: url("../images/Bhagaskara_01.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  padding-bottom: 54%;
-  height: 0; }
+  background-size: cover;
+  padding-bottom: 100vh;
+  height: 0;
+  background-position: center; }
   section.myTopHeader .col-12 :last-child {
     padding-top: 1px; }
   section.myTopHeader .ico_shape:nth-child(-n+2),
