@@ -1,0 +1,91 @@
+[1mdiff --git a/script/script.js b/script/script.js[m
+[1mindex cc169d2..dfb0a0d 100644[m
+[1m--- a/script/script.js[m
+[1m+++ b/script/script.js[m
+[36m@@ -134,7 +134,6 @@[m [m$( document ).ready(function() {[m
+ [m
+ [m
+         }[m
+[31m-    });[m
+ [m
+ [m
+ [m
+[36m@@ -147,8 +146,6 @@[m [m$( document ).ready(function() {[m
+ [m
+ //Count 4 numbers[m
+ [m
+[31m-    $( document ).ready(function() {[m
+[31m-        console.log('ready');[m
+ [m
+ ///Function start when scroll top is 500 or more.[m
+ [m
+[36m@@ -193,14 +190,8 @@[m [m$( document ).ready(function() {[m
+ [m
+ [m
+ [m
+[31m-    });[m
+[31m-[m
+[31m-[m
+ //Slider[m
+ [m
+[31m-    $( document ).ready(function() {[m
+[31m-        console.log( "ready!" );[m
+[31m-[m
+         var speedOfScrolling = 4100;[m
+         var currentSlaid = 1;[m
+ [m
+[36m@@ -228,8 +219,6 @@[m [m$( document ).ready(function() {[m
+ [m
+         }[m
+ [m
+[31m-    });[m
+[31m-[m
+ [m
+ [m
+ [m
+[36m@@ -353,4 +342,7 @@[m [m$( document ).ready(function() {[m
+     });[m
+ [m
+ [m
+[31m-});[m
+\ No newline at end of file[m
+[32m+[m[32m  });[m
+[32m+[m
+[32m+[m[32m});[m
+[41m+[m
+[1mdiff --git a/styles/test.js b/styles/test.js[m
+[1mdeleted file mode 100644[m
+[1mindex c50ca2a..0000000[m
+[1m--- a/styles/test.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,29 +0,0 @@[m
+[31m-/**[m
+[31m- * Created by pp on 2016-01-12.[m
+[31m- */[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-function tellIfIs(pattern, myStr) {[m
+[31m-    var x1 = pattern[0];[m
+[31m-[m
+[31m-    for (var i = 0; i < myStr.length; i++) {[m
+[31m-        if (x1 === myStr[0]) {[m
+[31m-            for (var j = 0; j < pattern.length; j++) {[m
+[31m-                if (pattern[j] !== myStr[i + j]) {[m
+[31m-                    // nie zgadza sie[m
+[31m-                    break;[m
+[31m-                }[m
+[31m-            }[m
+[31m-[m
+[31m-            if (j === pattern.length) {[m
+[31m-                return true[m
+[31m-            }[m
+[31m-        }[m
+[31m-    }[m
+[31m-    return false[m
+[31m-}[m
+[31m-[m
+[31m-    var myStr = "12gtty3456";[m
+[31m-    var pattern = "ty";[m
+\ No newline at end of file[m

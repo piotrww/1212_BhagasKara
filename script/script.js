@@ -134,7 +134,6 @@ $( document ).ready(function() {
 
 
         }
-    });
 
 
 
@@ -147,8 +146,6 @@ $( document ).ready(function() {
 
 //Count 4 numbers
 
-    $( document ).ready(function() {
-        console.log('ready');
 
 ///Function start when scroll top is 500 or more.
 
@@ -193,13 +190,7 @@ $( document ).ready(function() {
 
 
 
-    });
-
-
 //Slider
-
-    $( document ).ready(function() {
-        console.log( "ready!" );
 
         var speedOfScrolling = 4100;
         var currentSlaid = 1;
@@ -227,8 +218,6 @@ $( document ).ready(function() {
             }
 
         }
-
-    });
 
 
 
@@ -353,4 +342,7 @@ $( document ).ready(function() {
     });
 
 
+  });
+
 });
+
